@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Movies</title>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden; /* Hide overflowing video */
+        }
+
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            position: relative;
+            z-index: 1; /* Ensure header is above video */
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .game-list {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 100px; /* Ensure content is below header */
+        }
+
+        .game-image {
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .game-image img {
+            width: 327px;
+            height: 250px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .game-info {
+            display: none;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+ 
+<body>
+ <!-- Background Video -->
+    <video id="bg-video" autoplay loop muted>
+        <source src="file:///C:/Users/Kelvin%20Chinaka/Desktop/New%20folder/jGRASP/WMD%20assignment/48569-454825064_small.mp4" type="video/mp4">
+        <!-- Add additional source elements for other video formats -->
+        Your browser does not support the video tag.
+    </video>
+
+ <header>
+        <a href="#top">
+		<img alt="logo" height="90" src="R.png" width="100"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Movies.html">Movies</a></li>
+                <li><a href="TV Shows.html">TV Shows</a></li>
+                <li><a href="games and apps.html">Games & Apps</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+ <p><img alt="KingKong" height="234" src="king%20kong.jpeg" width="149" /><img alt="joker" height="234" src="joker.jpeg" width="149" /><img alt="kung" height="234" src="kung%20fu.jpeg" width="149" /><img alt="Bee" height="234" src="bee.jpeg" width="143" /><img alt="blue" height="234" src="blue.jpeg" width="149" /><img alt="equal" height="234" src="equal.jpeg" width="149" /><img height="234" src="expend.jpeg" width="149" /></p>
+    
+
+
+</body>
+
+</html>
