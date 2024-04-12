@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: gold; /* Text color set to gold */
-    overflow: hidden; /* Hide any overflowing video */
+    color: white;
+    overflow: hidden; /* Hide overflowing video */
 }
 
 #bg-video {
@@ -12,8 +12,6 @@ body {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     z-index: -1; /* Place the video behind other content */
 }
 
@@ -21,9 +19,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    position: relative; /* Ensure the header is above the video */
-    z-index: 1;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    position: relative;
+    z-index: 1; /* Ensure header is above video */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 }
 
 nav ul {
@@ -43,42 +48,43 @@ nav li:last-child {
 
 nav a {
     text-decoration: none;
-    color: gold;
+    color: white;
     font-weight: bold;
 }
 
-.horizontal-container {
+.image-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 50px;
-    padding: 0 20px;
+    padding: 20px;
+    margin-top: 20px; /* Adjust as needed */
 }
 
-.image-container {
+.image-item {
     text-align: center;
+    position: relative;
 }
 
-.image-container img {
-    width: 234px;
-    height: 217px;
-    margin-bottom: 10px;
-}
-
-.button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: gold;
-    border: none;
+.image-item img {
+    width: 149px;
+    height: 234px;
     border-radius: 5px;
-    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.image-title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
 }
