@@ -96,3 +96,35 @@ nav a {
 .image-item:hover .image-title {
     opacity: 1;
 }
+/* CSS for image containers */
+.image-container {
+    width: 30%; /* Adjust the width as needed */
+    margin: 20px; /* Add margin to create space between images */
+    position: relative;
+}
+
+/* CSS for images */
+.image-container img {
+    width: 100%; /* Make the images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* CSS for image captions */
+.image-container a {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 5px 10px; /* Add padding to the captions */
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* CSS for hover effect on image containers */
+.image-container:hover a {
+    opacity: 1; /* Show the caption on hover */
+}
+
