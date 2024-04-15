@@ -30,10 +30,21 @@
         </nav>
     </header>
 
-    <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Please leave your feedback here..."></textarea>
+    <form id="feedback-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="feedback">Feedback:</label>
+        <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Please leave your feedback here..." required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 
     <script>
-        // JavaScript code can be added here for form validation or other functionality
+        // JavaScript code can be added here for form submission handling or other functionality
     </script>
 </body>
 
