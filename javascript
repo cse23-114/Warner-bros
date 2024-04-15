@@ -38,7 +38,11 @@
 
     <div class="image-grid">
         <div class="image-item">
-            <img alt="KingKong" height="234" src="king%20kong.jpeg" width="149" onclick="toggleInfo('king-kong-info')">
+            <!-- Add link to trigger the JavaScript function -->
+            <a href="#" onclick="toggleInfo('king-kong-info')">
+                <img alt="KingKong" height="234" src="king%20kong.jpeg" width="149">
+            </a>
+            <!-- Add information div -->
             <div class="image-title" id="king-kong-info">King-Kong vs Godzilla</div>
         </div>
         <!-- Add other image items here -->
