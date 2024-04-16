@@ -154,3 +154,15 @@ body {
 .social-media-icons li img {
     width: 30px; /* Adjust the size of the icons as needed */
 }
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    /* overflow: hidden; */ /* Remove this line to enable scrolling */
+    background-color: #000; /* Set a background color for better readability */
+}
+
+/* Rest of your CSS styles... */
+
