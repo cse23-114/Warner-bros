@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Games & Apps</title>
+   
+    <script>
+        function toggleGameInfo(infoId) {
+            var info = document.getElementById(infoId);
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+        <nav>
+            <ul>
+                <li><a href="warner.html">Home</a></li>
+                <li><a href="Movies.html">Movies</a></li>
+                <li><a href="TV Shows.html">TV Shows</a></li>
+                <li><a href="games and apps.html">Games & Apps</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="game-list">
+        <a href="#" onclick="toggleGameInfo('game-info-1')">
+            <figure class="game-image">
+                <img alt="Froza Horizon 5" class="auto-style1" src="froza.jpeg">
+                <figcaption>Froza Horizon 5</figcaption>
+            </figure>
+            <div class="game-info" id="game-info-1">
+                <!-- Froza Horizon 5 Info -->
+                <p>This is the information for Froza Horizon 5</p>
+            </div>
+        </a>
+
+        <a href="#" onclick="toggleGameInfo('game-info-2')">
+            <figure class="game-image">
+                <img alt="Blur" src="blur.png" />
+                <figcaption>Blur</figcaption>
+            </figure>
+            <div class="game-info" id="game-info-2">
+                <!-- Blur Info -->
+                <p>This is the information for Blur</p>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
