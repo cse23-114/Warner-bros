@@ -50,7 +50,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
     margin-top: 20px;
 }
 
