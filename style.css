@@ -4,7 +4,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
-    overflow: hidden; /* Hide overflowing video */
     background-color: #000; /* Set a background color for better readability */
 }
 
@@ -118,51 +117,3 @@ footer {
     width: 30px; /* Adjust the size of social media icons as needed */
     height: auto;
 }
-
-/* Make the footer transparent */
-footer {
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 9999; /* Ensures it stays on top of other content */
-}
-
-/* Add padding to the bottom of the body to make space for the fixed footer */
-body {
-    padding-bottom: 60px; /* Adjust this value based on the height of your footer */
-}
-
-/* Ensure proper scrolling */
-.image-grid {
-    margin-bottom: 80px; /* Adjust this value to leave space between the grid and footer */
-}
-
-/* Style the social media icons */
-.social-media-icons {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.social-media-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-media-icons li img {
-    width: 30px; /* Adjust the size of the icons as needed */
-}
-/* Global styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    /* overflow: hidden; */ /* Remove this line to enable scrolling */
-    background-color: #000; /* Set a background color for better readability */
-}
-
-/* Rest of your CSS styles... */
-
