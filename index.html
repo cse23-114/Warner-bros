@@ -21,12 +21,18 @@
             position: relative; /* Ensure content stays above video */
             z-index: 1;
             color: white; /* Example color */
+            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
         }
 
         /* Styling for search bar */
         .search-container {
             text-align: center;
             margin-top: 20px;
+            position: absolute; /* Position relative to the viewport */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the container */
+            z-index: 2; /* Ensure the search bar is above the video */
         }
 
         .search-container input[type="text"] {
@@ -51,9 +57,10 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: absolute;
+            position: fixed; /* Position fixed at the bottom */
             bottom: 0;
             width: 100%;
+            z-index: 3; /* Ensure the footer is above the video */
         }
 
         /* Styling for navigation bar */
@@ -86,7 +93,7 @@
 <body>
     <!-- Video Background -->
     <video autoplay loop muted>
-        <source src="1046400886-preview.mp4" type="video/mp4">
+        <source src="your-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -123,12 +130,12 @@
         <div class="button-container">
             <button onclick="nextImage()">Next</button>
         </div>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
