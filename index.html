@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Warner Bros Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         /* Styling for video background */
         video {
@@ -28,11 +27,6 @@
         .search-container {
             text-align: center;
             margin-top: 20px;
-            position: absolute; /* Position relative to the viewport */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Center the container */
-            z-index: 2; /* Ensure the search bar is above the video */
         }
 
         .search-container input[type="text"] {
@@ -60,32 +54,6 @@
             position: fixed; /* Position fixed at the bottom */
             bottom: 0;
             width: 100%;
-            z-index: 3; /* Ensure the footer is above the video */
-        }
-
-        /* Styling for navigation bar */
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
         }
     </style>
 </head>
@@ -120,16 +88,23 @@
 
         <!-- Search Bar -->
         <div class="search-container">
-            <form action="/search" method="GET">
-                <input type="text" name="q" placeholder="Search...">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET">
+                <input type="text" name="q" placeholder="Search..." value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
                 <button type="submit">Search</button>
             </form>
         </div>
 
-        <!-- Button Container -->
-        <div class="button-container">
-            <button onclick="nextImage()">Next</button>
-        </div>
+        <!-- Display search results -->
+        <?php
+        if (isset($_GET['q']) && !empty(trim($_GET['q']))) {
+            $search_query = trim($_GET['q']);
+
+            // Perform search and display results here
+            echo "<div>Search results for: " . htmlspecialchars($search_query) . "</div>";
+            // Example: Perform database query and display search results
+        }
+        ?>
+
     </div>
 
     <!-- Footer -->
