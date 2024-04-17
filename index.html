@@ -1,115 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Warner Bros Website</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Movies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        /* Styling for video background */
-        video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1; /* Ensure the video stays behind other content */
-        }
+        /* Your existing CSS styles */
 
-        /* Styling for other elements */
-        .content {
-            position: relative; /* Ensure content stays above video */
-            z-index: 1;
-            color: white; /* Example color */
-            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
-        }
-
-        /* Styling for search bar */
-        .search-container {
-            text-align: center;
+        /* Additional styles for search results */
+        .search-results {
             margin-top: 20px;
         }
 
-        .search-container input[type="text"] {
-            padding: 8px;
-            width: 300px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .search-results li {
+            margin-bottom: 10px;
         }
 
-        .search-container button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Styling for footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed; /* Position fixed at the bottom */
-            bottom: 0;
-            width: 100%;
+        .search-results li a {
+            color: blue;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
     <!-- Video Background -->
-    <video autoplay loop muted>
+    <video autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1;">
         <source src="56360-479358412.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Content -->
-    <div class="content">
-        <header>
-            <figure>
-                <a href="#top">
-                    <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
-                </a>
-            </figure>
+    <!-- Your existing header -->
+    <header>
+        <a href="#top">
+            <img alt="Screenshot 2024-04-12 160015.png" height="90" src="Screenshot 2024-04-12 160015.png" width="100"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="TV Shows.html">TV Shows</a></li>
+                <li><a href="games & apps.html">Games & Apps</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="TV Shows.html">TV Shows</a></li>
-                    <li><a href="games & apps.html">Games & Apps</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Search Bar -->
-        <div class="search-container">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET">
-                <input type="text" name="q" placeholder="Search..." value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-
-        <!-- Display search results -->
-        <?php
-        if (isset($_GET['q']) && !empty(trim($_GET['q']))) {
-            $search_query = trim($_GET['q']);
-
-            // Perform search and display results here
-            echo "<div>Search results for: " . htmlspecialchars($search_query) . "</div>";
-            // Example: Perform database query and display search results
-        }
-        ?>
-
+    <!-- Search form -->
+    <div class="search-container">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET">
+            <input type="text" name="q" placeholder="Search movies...">
+            <button type="submit">Search</button>
+        </form>
     </div>
 
-    <!-- Footer -->
+    <?php
+    // Check if search query is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['q']) && !empty(trim($_GET['q']))) {
+        // Search query
+        $search_query = $_GET['q'];
+
+        // Array of movie names (replace with your actual movie names)
+        $movies = array(
+            "King-Kong vs Godzilla",
+            "The Joker",
+            "Kung Fu Panda",
+            "BeeKeeper",
+            "Blue Beetle",
+            "Equalizer 3",
+            "Red Notice",
+            "Lift",
+            "Expend4bles",
+            "The Dune",
+            "The Flash",
+            "The Jumanji",
+            "The Meg 2",
+            "Guardians of the Galaxy Vol. 3",
+            "The Mother",
+            "The Deadpool",
+            "The Deadshot",
+            "The John Wick Chapter 4",
+            "The Monkey Man",
+            "The Nun II",
+            "Love and Love Not",
+            "The Boy Next Door",
+            "The Sisu",
+            "No Hard Feelings"
+        );
+
+        // Search matching movies
+        $search_results = array_filter($movies, function ($movie) use ($search_query) {
+            return strpos(strtolower($movie), strtolower($search_query)) !== false;
+        });
+
+        // Display search results
+        if (count($search_results) > 0) {
+            echo "<div class='search-results'>";
+            echo "<h2>Search results for '$search_query':</h2>";
+            echo "<ul>";
+            foreach ($search_results as $result) {
+                echo "<li><a href='#'>$result</a></li>";
+            }
+            echo "</ul>";
+            echo "</div>";
+        } else {
+            echo "<div class='search-results'>";
+            echo "<p>No results found for '$search_query'.</p>";
+            echo "</div>";
+        }
+    }
+    ?>
+
+    <!-- Your existing footer -->
     <footer>
-        <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
+        <ul class="social-media-icons">
+            <li><a href="#"><img src="whATSP.png" alt="WhatsApp"></a></li>
+            <li><a href="#"><img src="TIKTOK.jpeg" alt="TikTok"></a></li>
+            <li><a href="#"><img src="TWITTER.jpeg" alt="Twitter"></a></li>
+            <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
+            <!-- Add more social media icons as needed -->
+        </ul>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
 
