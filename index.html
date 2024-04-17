@@ -6,6 +6,23 @@
     <title>Warner Bros Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        /* Styling for video background */
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+        }
+
+        /* Styling for other elements */
+        .content {
+            position: relative; /* Ensure content stays above video */
+            z-index: 1;
+            color: white; /* Example color */
+        }
+
         /* Styling for search bar */
         .search-container {
             text-align: center;
@@ -67,42 +84,51 @@
 </head>
 
 <body>
-    <header>
-        <figure>
-            <a href="#top">
-                <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
-            </a>
-        </figure>
+    <!-- Video Background -->
+    <video autoplay loop muted>
+        <source src="1046400886-preview.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Content -->
+    <div class="content">
+        <header>
+            <figure>
+                <a href="#top">
+                    <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
+                </a>
+            </figure>
 
-    <!-- Search Bar -->
-    <div class="search-container">
-        <form action="/search" method="GET">
-            <input type="text" name="q" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="TV Shows.html">TV Shows</a></li>
+                    <li><a href="games & apps.html">Games & Apps</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" name="q" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <button onclick="nextImage()">Next</button>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
+        </footer>
     </div>
-
-    <!-- Button Container -->
-    <div class="button-container">
-        <button onclick="nextImage()">Next</button>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Warner Bros. All Rights Reserved.</p>
-    </footer>
 </body>
 
 </html>
