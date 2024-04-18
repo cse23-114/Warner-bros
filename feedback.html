@@ -31,6 +31,51 @@
             padding: 20px;
             text-align: center;
         }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            background: none;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
@@ -42,10 +87,10 @@
         Your browser does not support the video tag.
     </video>
     <header>
-        <a href="#top">
-            <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
-        </a>
         <nav>
+            <a href="#top">
+                <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
+            </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
@@ -54,6 +99,10 @@
                 <li><a href="collections.html">Collections</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
+            <div class="search-bar">
+                <img src="search-icon.png" alt="Search">
+                <input type="text" placeholder="Search">
+            </div>
         </nav>
     </header>
 
