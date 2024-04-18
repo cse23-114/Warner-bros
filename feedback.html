@@ -2,9 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Feedback</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
+
+        /* Additional CSS to style the form and footer */
+        #feedback-form {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the footer readable */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
