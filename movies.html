@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .horizontal-container {
             display: flex;
             justify-content: center;
@@ -65,30 +71,6 @@
             padding-bottom: 80px;
         }
 
-        /* Search Container */
-        .search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .search-container input[type="text"],
-        .search-container button {
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .search-container input[type="text"] {
-            width: 500px;
-        }
-
-        .search-container button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
         /* Footer */
         footer {
             background-color: #333;
@@ -101,29 +83,31 @@
             z-index: 3;
         }
 
-        /* Navigation Bar */
-        nav ul {
-            margin: 0;
-            padding: 0;
+        .social-media-icons {
             list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
             text-align: center;
         }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -138,7 +122,7 @@
     <!-- Content -->
     <div class="content">
         <header>
-            <figure>
+            <figure style="background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
                 <a href="#top">
                     <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
                 </a>
