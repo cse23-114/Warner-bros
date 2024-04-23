@@ -45,25 +45,143 @@
         .image-item:hover img {
             transform: scale(1.1); /* Scale up image on hover */
         }
+        /* Styling for video background */
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+        }
+
+        /* Styling for other elements */
+        .content {
+            position: relative; /* Ensure content stays above video */
+            z-index: 1;
+            color: white; /* Example color */
+            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
+        }
+
+        /* Styling for search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+            position: absolute; /* Position relative to the viewport */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the container */
+            z-index: 2; /* Ensure the search bar is above the video */
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Styling for footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; /* Position fixed at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 3; /* Ensure the footer is above the video */
+        }
+
+        /* Styling for navigation bar */
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        .search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px; /* Keep padding as it is */
+    width: 500px; /* Increase width to enlarge the search bar */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px 15px; /* Keep padding as it is */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 
 <body>
+    <!-- Video Background -->
+    <video autoplay loop muted>
+        <source src="56360-479358412.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-    <header>
-        <a href="#top">
-            <img alt="Screenshot 2024-04-12 160015.png" height="90" src="Screenshot 2024-04-12 160015.png" width="100"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Content -->
+    <div class="content">
+        <header>
+            <figure>
+                <a href="#top">
+                    <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
+                </a>
+            </figure>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="TV Shows.html">TV Shows</a></li>
+                    <li><a href="games & apps.html">Games & Apps</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <div class="horizontal-container">
         <div class="image-item">
