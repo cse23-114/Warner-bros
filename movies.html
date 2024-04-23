@@ -6,24 +6,25 @@
     <title>Movies</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        /* General Styles */
         .horizontal-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Allow images to wrap to the next line */
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
         .image-item {
-            margin: 10px; /* Add some margin around each image item */
-            text-align: center; /* Center align the content */
-            position: relative; /* Positioning for hovering */
+            margin: 10px;
+            text-align: center;
+            position: relative;
         }
 
         .image-item img {
-            display: block; /* Make sure images don't have any extra space */
-            max-width: 100%; /* Ensure images don't exceed their container */
-            transition: transform 0.3s; /* Smooth transition for scaling */
+            display: block;
+            max-width: 100%;
+            transition: transform 0.3s;
         }
 
         .image-title {
@@ -31,78 +32,76 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 5px;
             margin: 0;
-            transition: opacity 0.3s; /* Smooth transition for opacity */
-            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s;
+            opacity: 0;
         }
 
         .image-item:hover .image-title {
-            opacity: 1; /* Show title on hover */
+            opacity: 1;
         }
 
         .image-item:hover img {
-            transform: scale(1.1); /* Scale up image on hover */
+            transform: scale(1.1);
         }
-        /* Styling for video background */
+
+        /* Video Background */
         video {
             position: fixed;
             right: 0;
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
-            z-index: -1; /* Ensure the video stays behind other content */
+            z-index: -1;
         }
 
-        /* Styling for other elements */
+        /* Content Styling */
         .content {
-            position: relative; /* Ensure content stays above video */
+            position: relative;
             z-index: 1;
-            color: white; /* Example color */
-            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
+            color: white;
+            padding-bottom: 80px;
         }
 
-        /* Styling for search bar */
+        /* Search Container */
         .search-container {
             text-align: center;
             margin-top: 20px;
-            position: absolute; /* Position relative to the viewport */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Center the container */
-            z-index: 2; /* Ensure the search bar is above the video */
         }
 
-        .search-container input[type="text"] {
+        .search-container input[type="text"],
+        .search-container button {
             padding: 8px;
-            width: 300px;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
 
+        .search-container input[type="text"] {
+            width: 500px;
+        }
+
         .search-container button {
-            padding: 8px 15px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
 
-        /* Styling for footer */
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: fixed; /* Position fixed at the bottom */
+            position: fixed;
             bottom: 0;
             width: 100%;
-            z-index: 3; /* Ensure the footer is above the video */
+            z-index: 3;
         }
 
-        /* Styling for navigation bar */
+        /* Navigation Bar */
         nav ul {
             margin: 0;
             padding: 0;
@@ -126,32 +125,6 @@
         nav ul li a:hover {
             color: #007bff;
         }
-        .search-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.search-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.search-container input[type="text"] {
-    padding: 8px; /* Keep padding as it is */
-    width: 500px; /* Increase width to enlarge the search bar */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.search-container button {
-    padding: 8px 15px; /* Keep padding as it is */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
     </style>
 </head>
 
@@ -183,104 +156,105 @@
             </nav>
         </header>
 
-    <div class="horizontal-container">
-        <div class="image-item">
-            <a href="king kong.html"><img alt="KingKong" height="234" src="king%20kong.jpeg" width="149"></a>
-            <div class="image-title">King-Kong vs Godzilla</div>
-        </div>
-        <div class="image-item">
-             <a href="joker.html"><img alt="joker" height="234" src="joker.jpeg" width="149"></a>
-            <div class="image-title">The Joker</div>
-        </div>
-        <div class="image-item">
-            <a href="kung fu panda.html"><img alt="kung" height="234" src="kung%20fu.jpeg" width="149"></a>
-            <div class="image-title">The Kung Fu Panda 4</div>
-        </div>
-        <div class="image-item">
-            <a href="bee.html"><img alt="Bee" height="234" src="bee.jpeg" width="143"></a>
-          <div class="image-title">The Beekeeper</div>
-        </div>
-        <div class="image-item">
-           <a href="blue.html"> <img alt="blue" height="234" src="blue.jpeg" width="149"></a>
-            <div class="image-title">Blue Bettle</div>
-        </div>
-        <div class="image-item">
-            <a href="equal.html"><img alt="equal" height="234" src="equal.jpeg" width="149"></a>
-            <div class="image-title">The Equalizer 3</div>
-        </div>
-        <div class="image-item">
-            <a href="red.html"><img alt="red-notice-banner.jpg" height="234" src="red-notice-banner.jpg" width="149"></a>
-            <div class="image-title">TheRed Notice </div>
-        </div>
-        <div class="image-item">
-            <a href="lift.html"><img alt="lift.jpeg" height="234" src="lift.jpeg" width="149"></a>
-           <div class="image-title">The Lift</div>
-        </div>
-        <div class="image-item">
-            <a href="expend.html"><img alt="expend.jpeg" height="234" src="expend.jpeg" width="149"></a>
-            <div class="image-title">The Expend4bles</div>
-        </div>
-        <div class="image-item">
-            <a href="dune.html"<img alt="dune.jpeg" height="234" src="dune.jpeg" width="149"></a>
-            <div class="image-title">The Dune</div>
+        <div class="horizontal-container">
+            <div class="image-item">
+                <a href="king kong.html"><img alt="KingKong" height="234" src="king%20kong.jpeg" width="149"></a>
+                <div class="image-title">King-Kong vs Godzilla</div>
             </div>
-                <div class="image-item">                                     
-            <a href="flash.html"><img alt="Flash.jpg" height="234" src="Flash.jpg" width="149"></a>
-           <div class="image-title">The Flash</div>
+            <div class="image-item">
+                <a href="joker.html"><img alt="joker" height="234" src="joker.jpeg" width="149"></a>
+                <div class="image-title">The Joker</div>
+            </div>
+            <div class="image-item">
+                <a href="kung fu panda.html"><img alt="kung" height="234" src="kung%20fu.jpeg" width="149"></a>
+                <div class="image-title">The Kung Fu Panda 4</div>
+            </div>
+            <div class="image-item">
+                <a href="bee.html"><img alt="Bee" height="234" src="bee.jpeg" width="143"></a>
+                <div class="image-title">The Beekeeper</div>
+            </div>
+            <div class="image-item">
+                <a href="blue.html"> <img alt="blue" height="234" src="blue.jpeg" width="149"></a>
+                <div class="image-title">Blue Bettle</div>
+            </div>
+            <div class="image-item">
+                <a href="equal.html"><img alt="equal" height="234" src="equal.jpeg" width="149"></a>
+                <div class="image-title">The Equalizer 3</div>
+            </div>
+            <div class="image-item">
+                <a href="red.html"><img alt="red-notice-banner.jpg" height="234" src="red-notice-banner.jpg" width="149"></a>
+                <div class="image-title">TheRed Notice </div>
+            </div>
+            <div class="image-item">
+                <a href="lift.html"><img alt="lift.jpeg" height="234" src="lift.jpeg" width="149"></a>
+                <div class="image-title">The Lift</div>
+            </div>
+            <div class="image-item">
+                <a href="expend.html"><img alt="expend.jpeg" height="234" src="expend.jpeg" width="149"></a>
+                <div class="image-title">The Expend4bles</div>
+            </div>
+            <div class="image-item">
+                <a href="dune.html"><img alt="dune.jpeg" height="234" src="dune.jpeg" width="149"></a>
+                <div class="image-title">The Dune</div>
+            </div>
+            <div class="image-item">
+                <a href="flash.html"><img alt="Flash.jpg" height="234" src="Flash.jpg" width="149"></a>
+                <div class="image-title">The Flash</div>
+            </div>
+            <div class="image-item">
+                <a href="jumanji.html"><img alt="jumanji.jpeg" height="234" src="jumanji.jpeg" width="149"></a>
+                <div class="image-title">Jumanji To The Next Level</div>
+            </div>
+            <div class="image-item">
+                <a href="meg.html"><img alt="meg.jpeg" height="234" src="meg.jpeg" width="149"></a>
+                <div class="image-title">The Meg 2</div>
+            </div>
+            <div class="image-item">
+                <a href="vol3.html"><img alt="vol 3.jpeg" height="234" src="vol 3.jpeg" width="149"></a>
+                <div class="image-title">Guardians of the Galaxy Vol. 3</div>
+            </div>
+            <div class="image-item">
+                <a href="mother.html"><img alt="acti.jpeg" height="234" src="acti.jpeg" width="149"></a>
+                <div class="image-title">The Mother</div>
+            </div>
+            <div class="image-item">
+                <a href="deadpool.html"><img alt="deadpool.jpeg" height="234" src="deadpool.jpeg" width="149"></a>
+                <div class="image-title">The Deadpool</div>
+            </div>
+            <div class="image-item">
+                <a href="dead.html"><img alt="dead.jpeg" height="234" src="dead.jpeg" width="149"></a>
+                <div class="image-title">The Deadshot</div>
+            </div>
+            <div class="image-item">
+                <a href="john.html"><img alt="john.jpeg" height="234" src="john.jpeg" width="149"></a>
+                <div class="image-title">The John Wick Chapter 4</div>
+            </div>
+            <div class="image-item">
+                <a href="man.html"><img alt="monkey.jpeg" height="234" src="monkey.jpeg" width="149"></a>
+                <div class="image-title">The Monkey Man</div>
+            </div>
+            <div class="image-item">
+                <a href="nun.html"><img alt="nun.jpeg" height="234" src="nun.jpeg" width="149"></a>
+                <div class="image-title">The Nun II</div>
+            </div>
+            <div class="image-item">
+                <a href="love.html"><img alt="love.jpeg" height="234" src="love.jpeg" width="149"></a>
+                <div class="image-title">Love and Love Not</div>
+            </div>
+            <div class="image-item">
+                <a href="boy.html"><img alt="the boy.jpeg" height="234" src="the boy.jpeg" width="149"></a>
+                <div class="image-title">The Boy Next Door</div>
+            </div>
+            <div class="image-item">
+                <a href="sisu.html"><img alt="sisu.jpeg" height="234" src="sisu.jpeg" width="149"></a>
+                <div class="image-title">The Sisu</div>
+            </div>
+            <div class="image-item">
+                <a href="romance.html"><img alt="romance.jpeg" height="234" src="romance.jpeg" width="149"></a>
+                <div class="image-title">No Hard Feelings</div>
+            </div>
         </div>
-         <div class="image-item">
-            <a href="jumanji.html"><img alt="jumanji.jpeg" height="234" src="jumanji.jpeg" width="149"></a>
-            <div class="image-title">Jumanji To The Next Level</div>
-        </div>
-         <div class="image-item">
-            <a href="meg.html"><img alt="meg.jpeg" height="234" src="meg.jpeg" width="149"></a>
-            <div class="image-title">The Meg 2</div>
-        </div>
-         <div class="image-item">
-            <a href="vol3.html"><img alt="vol 3.jpeg" height="234" src="vol 3.jpeg" width="149"></a>
-            <div class="image-title">Guardians of the Galaxy Vol. 3</div>
-        </div>
-         <div class="image-item">
-            <a href="mother.html"<img alt="acti.jpeg" height="234" src="acti.jpeg" width="149"></a>
-            <div class="image-title">The Mother</div>
-        </div>
-  
-     <div class="image-item">
-            <a href="deadpool.html"><img alt="deadpool.jpeg" height="234" src="deadpool.jpeg" width="149"></a>
-            <div class="image-title">The Deadpool</div>
-        </div>
-      <div class="image-item">
-            <a href="dead.html"><img alt="dead.jpeg" height="234" src="dead.jpeg" width="149"></a>
-            <div class="image-title">The Deadshot</div>
-        </div>
-    <div class="image-item">
-           <a href="john.html"> <img alt="john.jpeg" height="234" src="john.jpeg" width="149"></a>
-            <div class="image-title">The John Wick Chapter 4</div>
-        </div>
-    <div class="image-item">
-            <a href="man.html".<img alt="monkey.jpeg" height="234" src="monkey.jpeg" width="149"></a>
-            <div class="image-title">The Monkey Man</div>
-        </div>
-    <div class="image-item">
-        <a href="nun.html"> <img alt="nun.jpeg" height="234" src="nun.jpeg" width="149"></a>
-            <div class="image-title">The Nun II</div>
-        </div>
-    <div class="image-item">
-            <a href="love.html"<img alt="love.jpeg" height="234" src="love.jpeg" width="149"></a>
-            <div class="image-title">Love and Love Not</div>
-        </div>
-    <div class="image-item">
-            <a href="boy.html"><img alt="the boy.jpeg" height="234" src="the boy.jpeg" width="149"></a>
-            <div class="image-title">The Boy Next Door</div>
-        </div>
-    <div class="image-item">
-            <a href="sisu.html"><img alt="sisu.jpeg" height="234" src="sisu.jpeg" width="149"></a>
-            <div class="image-title">The Sisu</div>
-        </div>
-    <div class="image-item">
-            <a href="romance.html"><img alt="romance.jpeg" height="234" src="romance.jpeg" width="149"></a>
-            <div class="image-title">No Hard Feelings</div>
-        </div>
+
     </div>
 
     <footer>
