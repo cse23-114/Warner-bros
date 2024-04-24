@@ -53,7 +53,7 @@
 
         /* Styling for footer */
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -61,6 +61,33 @@
             bottom: 0;
             width: 100%;
             z-index: 3; /* Ensure the footer is above the video */
+        }
+
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         /* Styling for navigation bar */
@@ -87,32 +114,6 @@
         nav ul li a:hover {
             color: #007bff;
         }
-        .search-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.search-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.search-container input[type="text"] {
-    padding: 8px; /* Keep padding as it is */
-    width: 500px; /* Increase width to enlarge the search bar */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.search-container button {
-    padding: 8px 15px; /* Keep padding as it is */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
     </style>
 </head>
 
@@ -126,7 +127,7 @@
     <!-- Content -->
     <div class="content">
         <header>
-            <figure>
+            <figure style="background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
                 <a href="#top">
                     <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
                 </a>
@@ -151,6 +152,7 @@
                 <button type="submit">Search</button>
             </form>
         </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -161,7 +163,7 @@
             <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
             <!-- Add more social media icons as needed -->
         </ul>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>&copy; 2024 Warner Bros Website. All rights reserved.</p>
     </footer>
 </body>
 
