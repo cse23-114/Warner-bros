@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Feedback</title>
+    <style>
+        /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
+
+        /* Additional CSS to style the form and footer */
+        #feedback-form {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the footer readable */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video id="bg-video" autoplay loop muted>
+        <source src="48569-454825064_small.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <nav>
+            <a href="#top">
+                <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="TV Shows.html">TV Shows</a></li>
+                <li><a href="games & apps.html">Games & Apps</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <footer>
+        <ul class="social-media-icons">
+            <li><a href="#"><img src="whatsapp.png" alt="WhatsApp"></a></li>
+            <li><a href="#"><img src="tiktok.png" alt="TikTok"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+        </ul>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code can be added here for form submission handling or other functionality
+    </script>
+</body>
+
+</html>
