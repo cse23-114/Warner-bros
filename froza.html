@@ -48,60 +48,51 @@
 
         /* Styling for image grid */
         .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            justify-items: center;
             align-items: center;
-            margin-top: 20px;
-            color: white;
-             display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 20px;
+            gap: 20px;
             padding: 20px;
+            color: white;
         }
 
         .image-item {
-            margin: 10px;
             position: relative;
         }
-        .image-title {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px;
-            margin: 0;
-            font-weight: bold;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
 
-        /* Styling for text content */
-        .about {
-            width: 100%;
-            max-width: 900px; /* Adjust as needed */
-            margin: auto;
-            padding: 20px;
-            color: white;
-        }
-
-        .about p {
-            color: white;
-               margin-bottom: 20px;
-            line-height: 1.5;
-        }
         .image-item img {
             width: 100%;
             height: auto;
             max-width: 400px;
             display: block;
             margin: 0 auto;
+            border-radius: 10px;
         }
+
+        .image-title {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Styling for text content */
         .about {
+            max-width: 800px;
             padding: 20px;
+            color: white;
+        }
+
+        .about p {
+            margin-bottom: 10px;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -109,7 +100,7 @@
 <body>
     <!-- Video Background -->
     <video autoplay loop muted>
-        <source src="vid.mp4" type="video/mp4">
+        <source src="48569-454825064_small.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -135,7 +126,7 @@
         </div>
         <div class="about">
             <p>Watch the Trailer</p>
-            <iframe width="880" height="495" src="https://www.youtube.com/embed/btdtkN00O70" title="Forza Horizon 5 Official Announce Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/btdtkN00O70" title="Forza Horizon 5 Official Announce Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>The Requirements</p>
             <p>CPU: Intel i5-4460 or AMD Ryzen 3 1200</p>
             <p>RAM: 8 GB, Video Card: NVidia GTX 970 OR AMD RX 470</p>
