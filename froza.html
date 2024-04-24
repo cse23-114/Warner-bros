@@ -46,72 +46,50 @@
             color: #007bff;
         }
 
-        /* Styling for game list */
-        .game-list {
-            margin-top: 20px;
+        /* Styling for image grid */
+        .image-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            z-index: 2; /* Ensure game list is above video */
+            margin-top: 20px;
+            color: white;
         }
 
-        .game-list a {
-            text-decoration: none;
-            color: inherit;
+        .image-item {
             margin: 10px;
             position: relative;
         }
 
-        .game-image {
-            position: relative;
-            overflow: hidden;
-            width: 149px;
-            height: 234px;
-        }
-
-        .game-image img {
+        .image-item img {
+            width: 200px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
             display: block;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s;
         }
 
-        .game-image figcaption {
+        .image-title {
             position: absolute;
             bottom: 0;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: rgba(0, 0, 0, 0.5);
             padding: 5px;
             margin: 0;
-            color: white;
             font-weight: bold;
             text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
 
-        .game-list a:hover .game-image figcaption {
-            opacity: 1;
-        }
-
-        /* Styling for game info */
-        .game-info {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
+        /* Styling for text content */
+        .about {
+            width: 100%;
+            max-width: 900px; /* Adjust as needed */
+            margin: auto;
+            padding: 20px;
             color: white;
-            width: 80%;
-            z-index: 3; /* Ensure game info is above other content */
         }
 
-        .game-list a:hover .game-info {
-            display: block;
+        .about p {
+            color: white;
         }
     </style>
 </head>
@@ -137,6 +115,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="image-grid">
         <div class="image-item">
             <img alt="Froza 5" src="froza.jpeg">
@@ -144,13 +123,12 @@
         </div>
         <div class="about">
             <p>Watch the Trailer</p>
-           <iframe width="880" height="495" src="https://www.youtube.com/embed/btdtkN00O70" title="Forza Horizon 5 Official Announce Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="880" height="495" src="https://www.youtube.com/embed/btdtkN00O70" title="Forza Horizon 5 Official Announce Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>The Requirements</p>
             <p>CPU: Intel i5-4460 or AMD Ryzen 3 1200</p>
             <p>RAM: 8 GB, Video Card: NVidia GTX 970 OR AMD RX 470</p>
             <p>Dedicated Video RAM: 4096 MB</p>
-            <p>Pixel Shader: 5.1,Vertex Shader: 5.1</p>
-            <p></p>
+            <p>Pixel Shader: 5.1, Vertex Shader: 5.1</p>
         </div>
     </div>
 </body>
