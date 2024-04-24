@@ -142,41 +142,50 @@
         <a href="#" onclick="toggleGameInfo('game-info-1')">
             <figure class="game-image">
                <img alt="Froza Horizon 5" height="234" class="auto-style1" src="froza.jpeg" width="149"/>
-                < a href="froza.html">Froza Horizon 5</a>
+               <figcaption><a href="froza.html">Froza Horizon 5</a></figcaption>
             </figure>
         </a>
 
         <a href="#" onclick="toggleGameInfo('game-info-2')">
             <figure class="game-image">
                <img alt="Blur" height="234" src="blur.png" width="149"/>
-                <a href="blur.html">Blur</a>
+               <figcaption><a href="blur.html">Blur</a></figcaption>
             </figure>
-            
         </a>
-         <a href="#" onclick="toggleGameInfo('game-info-2')">
+         
+         <a href="#" onclick="toggleGameInfo('game-info-3')">
             <figure class="game-image">
                 <img alt="Fifa 22" height="234" src="fifa22.jpeg"width="149" />
-                <a href="fifa.html">Fifa 22</a>
+                <figcaption><a href="fifa.html">Fifa 22</a></figcaption>
             </figure>
-            
         </a>
-         <a href="#" onclick="toggleGameInfo('game-info-2')">
+         
+         <a href="#" onclick="toggleGameInfo('game-info-4')">
             <figure class="game-image">
                 <img alt="Call Of Duty" height="234"src="call of duty.jpeg" width="149" />
-                <a href="call.html">Call Of Duty</a>
+                <figcaption><a href="call.html">Call Of Duty</a></figcaption>
             </figure>
-            
         </a>
-         <a href="#" onclick="toggleGameInfo('game-info-2')">
+         
+         <a href="#" onclick="toggleGameInfo('game-info-5')">
             <figure class="game-image">
                 <img alt="2K" height="234"src="w2k.jpeg" width="149"/>
-                <figcaption>Wrestling 2K</figcaption>
+                <figcaption><a href="w2k.html">Wrestling 2K</a></figcaption>
             </figure>
-            
         </a>
     </div>
 
     <!-- JavaScript to toggle game info -->
     <script>
         function toggleGameInfo(infoId) {
-            var info = document
+            var info = document.getElementById(infoId);
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
