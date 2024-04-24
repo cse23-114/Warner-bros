@@ -4,20 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <title>Games & Apps</title>
-   
-    <script>
-        function toggleGameInfo(infoId) {
-            var info = document.getElementById(infoId);
-            if (info.style.display === "none") {
-                info.style.display = "block";
-            } else {
-                info.style.display = "none";
-            }
+    <style>
+        /* Styling for video background */
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
         }
-    </script>
+
+        /* Styling for header */
+        header {
+            position: relative;
+            z-index: 2; /* Ensure header is above video */
+        }
+
+        /* Styling for navigation bar */
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Styling for game list */
+        .game-list {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Ensure game list is above video */
+        }
+
+        .game-list a {
+            text-decoration: none;
+            color: inherit;
+            margin: 10px;
+            position: relative;
+        }
+
+        .game-image {
+            position: relative;
+            overflow: hidden;
+            width: 149px;
+            height: 234px;
+        }
+
+        .game-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .game-image figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            margin: 0;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .game-list a:hover .game-image figcaption {
+            opacity: 1;
+        }
+
+        /* Styling for game info */
+        .game-info {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            color: white;
+            width: 80%;
+            z-index: 3; /* Ensure game info is above other content */
+        }
+
+        .game-list a:hover .game-info {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Video Background -->
+    <video autoplay loop muted>
+        <source src="your_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
     <header>
         <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
         <nav>
@@ -88,6 +194,8 @@
             </div>
         </a>
     </div>
-</body>
 
-</html>
+    <!-- JavaScript to toggle game info -->
+    <script>
+        function toggleGameInfo(infoId) {
+            var info = document
