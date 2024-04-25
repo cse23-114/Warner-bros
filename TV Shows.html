@@ -59,6 +59,27 @@
             color: white;
             text-decoration: none;
         }
+        
+        /* CSS for horizontal container */
+        .horizontal-container {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        .image-item {
+            flex: 0 0 auto; /* Ensure images maintain their original size */
+            margin-right: 10px; /* Add space between images */
+        }
+
+        .image-item img {
+            height: 234px;
+            width: 149px;
+        }
+
+        .image-title {
+            text-align: center;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -84,30 +105,30 @@
         </nav>
          <div class="horizontal-container">
             <div class="image-item">
-                <img alt="911" height="234" src="911.jpeg" width="149">
+                <img alt="911" src="911.jpeg">
                 <div class="image-title">The 911</div>
             </div>
             
             <div class="image-item">
-                <img alt="FBI" height="234" src="FBI.jpeg" width="149">
+                <img alt="FBI" src="FBI.jpeg">
                 <div class="image-title">The FBI</div>
             </div>
               <div class="image-item">
-                <img alt="Beacon 3" height="234" src="beac.jpeg" width="149">
+                <img alt="Beacon 3" src="beac.jpeg">
                 <div class="image-title">The Beacon</div>
             </div>
               <div class="image-item">
-                <img alt="Bloods" height="234" src="bloods.jpeg" width="149">
+                <img alt="Bloods" src="bloods.jpeg">
                 <div class="image-title">The Bloods</div>
             </div> <div class="image-item">
-                <img alt="The Neighborhood" height="234" src="hood.jpeg" width="149">
+                <img alt="The Neighborhood" src="hood.jpeg">
                 <div class="image-title">The Neghborhood</div>
             </div>
               <div class="image-item">
-                <img alt="FBI" height="234" src=".jpeg" width="149">
+                <img alt="FBI" src=".jpeg">
                 <div class="image-title">The FBI</div>
             </div>
-             
+         </div>
     </header>
   
     <footer>
