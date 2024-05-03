@@ -16,6 +16,7 @@
             z-index: -1; /* Ensure the video stays behind other content */
             object-fit: cover; /* Cover the entire viewport */
         }
+        
         /* Styling for other elements */
         .content {
             position: relative; /* Ensure content stays above video */
@@ -57,10 +58,43 @@
 
         /* Center the logo at the top */
         header {
-            display: flex;
-            justify-content: center;
             padding: 20px 0; /* Add padding top and bottom */
         }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px; /* Adjust image width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Styling for game list */
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Gap between game images */
+            margin-top: 20px; /* Add margin to separate from navigation */
+        }
+
+        .game-image {
+            text-align: center;
+            max-width: 150px; /* Adjust maximum width of game images */
+        }
+
+        .game-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .game-image figcaption {
+            margin-top: 10px; /* Add margin between image and caption */
+        }
+
         /* Styling for footer */
         footer {
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -110,85 +144,86 @@
     </video>
 
     <!-- Content -->
-    <header>      
-        <nav>
-             <a href="#top">
-                <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
-            </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="content">
+        <!-- Logo and Navigation -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#top">
+                        <img alt="logo" src="Screenshot 2024-04-12 160015.png">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="TV Shows.html">TV Shows</a></li>
+                    <li><a href="games & apps.html">Games & Apps</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="game-list">
+        <!-- Game List -->
+        <div class="game-list">
             <figure class="game-image">
-               <a href="froza.html"><img alt="Froza Horizon 5" height="234" src="froza.jpeg" width="149"></a>
-               <figcaption>Froza Horizon 5</figcaption>
+                <a href="froza.html"><img alt="Froza Horizon 5" src="froza.jpeg" width="149" height="234"></a>
+                <figcaption>Froza Horizon 5</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-               <img alt="Blur" height="234" src="blur.png" width="149"/>
-               <figcaption><a href="blur.html">Blur</a></figcaption>
+                <a href="blur.html"><img alt="Blur" src="blur.png" width="149" height="234"></a>
+                <figcaption>Blur</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Fifa 22" height="234" src="fifa22.jpeg"width="149" />
-                <figcaption><a href="fifa.html">Fifa 22</a></figcaption>
+                <a href="fifa.html"><img alt="Fifa 22" src="fifa22.jpeg" width="149" height="234"></a>
+                <figcaption>Fifa 22</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Call Of Duty" height="234"src="call of duty.jpeg" width="149" />
-                <figcaption><a href="call.html">Call Of Duty</a></figcaption>
+                <a href="call.html"><img alt="Call Of Duty" src="call of duty.jpeg" width="149" height="234"></a>
+                <figcaption>Call Of Duty</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="2K" height="234"src="w2k.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">Wrestling 2K</a></figcaption>
+                <a href="w2k.html"><img alt="Wrestling 2K" src="w2k.jpeg" width="149" height="234"></a>
+                <figcaption>Wrestling 2K</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="GTA 5" height="234"src="gt.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">GTA 5</a></figcaption>
+                <a href="gta5.html"><img alt="GTA 5" src="gt.jpeg" width="149" height="234"></a>
+                <figcaption>GTA 5</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="GRID 2" height="234"src="grid2.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">GRID 2</a></figcaption>
+                <a href="grid2.html"><img alt="GRID 2" src="grid2.jpeg" width="149" height="234"></a>
+                <figcaption>GRID 2</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Need Fpr Speed Hot Pursuit" height="234"src="hot.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">Need For Speed Hot Pursuit</a></figcaption>
+                <a href="hot.html"><img alt="Need For Speed Hot Pursuit" src="hot.jpeg" width="149" height="234"></a>
+                <figcaption>Need For Speed Hot Pursuit</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Need for Speed" height="234"src="ned.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">Need For Speed</a></figcaption>
+                <a href="nfs.html"><img alt="Need for Speed" src="ned.jpeg" width="149" height="234"></a>
+                <figcaption>Need For Speed</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Mortal Kombat" height="234"src="mort.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">Mortal Kombat</a></figcaption>
+                <a href="mort.html"><img alt="Mortal Kombat" src="mort.jpeg" width="149" height="234"></a>
+                <figcaption>Mortal Kombat</figcaption>
             </figure>
-        </a>
+
             <figure class="game-image">
-                <img alt="Need For Speed" height="234"src="nfs.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">Need For Speed</a></figcaption>
+                <a href="ufc.html"><img alt="UFC" src="ufc.jpeg" width="149" height="234"></a>
+                <figcaption>UFC</figcaption>
             </figure>
-        </a>
-            <figure class="game-image">
-                <img alt="UFC" height="234"src="ufc.jpeg" width="149"/>
-                <figcaption><a href="w2k.html">UFC</a></figcaption>
-            </figure>
-        </a>
+        </div>
     </div>
-<!-- Footer -->
+
+    <!-- Footer -->
     <footer>
         <ul class="social-media-icons">
             <li><a href="#"><img src="whATSP.png" alt="WhatsApp"></a></li>
