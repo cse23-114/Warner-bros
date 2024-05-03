@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Warner Bros Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         /* CSS code for background video */
         #bg-video {
@@ -16,6 +15,7 @@
             z-index: -1; /* Ensure the video stays behind other content */
             object-fit: cover; /* Cover the entire viewport */
         }
+        
         /* Styling for other elements */
         .content {
             position: relative; /* Ensure content stays above video */
@@ -56,11 +56,15 @@
         }
 
         /* Center the logo at the top */
-        header {
-            display: flex;
-            justify-content: center;
+        .logo {
             padding: 20px 0; /* Add padding top and bottom */
         }
+
+        .logo img {
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
         /* Styling for footer */
         footer {
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -112,7 +116,7 @@
     <!-- Content -->
     <div class="content">
         <!-- Logo -->
-        <header>
+        <header class="logo">
             <figure>
                 <img alt="logo" src="Screenshot 2024-04-12 160015.png" height="90" width="100">
             </figure>
@@ -129,7 +133,7 @@
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
     <div class="image-grid">
         <div class="image-item">
             <img alt="Blue Bettle" src="blue.jpeg">
