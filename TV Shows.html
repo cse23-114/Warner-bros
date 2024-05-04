@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="UTF-8">
     <title>TV Shows</title>
     <style>
         /* CSS code for background video */
@@ -15,27 +15,49 @@
             object-fit: cover; /* Cover the entire viewport */
         }
 
-        footer {
-            background-color: rgba(0, 0, 0, 0.5); /* Darkened background for better contrast */
-            color: white; /* Text color */
-            padding: 20px;
-            text-align: center;
-            font-family: Arial, sans-serif; /* Font family */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        body {
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Set default font family */
         }
 
-        /* CSS for horizontal container */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 20px 0; /* Add padding to top and bottom */
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s; /* Adding a smooth transition for color change */
+        }
+
+        nav ul li a:hover {
+            color: red; /* Changing text color to red on hover */
+        }
+
         .horizontal-container {
             display: flex;
-            overflow-x: auto; /* Enable horizontal scrolling */
-            padding: 20px 0; /* Add padding to space out from edges */
-            justify-content: center; /* Center-align items */
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px; /* Add margin from the top to avoid overlap with the navigation */
         }
 
         .image-item {
-            flex: 0 0 auto; /* Ensure images maintain their original size */
             margin-right: 20px; /* Add space between images */
         }
 
@@ -50,9 +72,20 @@
             text-align: center;
             margin-top: 10px; /* Increase margin for better spacing */
             font-size: 16px; /* Adjust font size */
+            color: white; /* Text color */
         }
 
-        /* Social Media Icons */
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: white; /* Text color */
+            padding: 20px;
+            text-align: center;
+        }
+
         .social-media-icons {
             list-style: none;
             padding: 0;
@@ -82,41 +115,6 @@
             background-color: #555; /* Darken background on hover */
             transform: translateY(-3px); /* Add slight lift effect on hover */
         }
-
-        /* Navigation */
-        nav {
-            background-color: (0, 0, 0, 0.5);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-family: Arial, sans-serif; /* Adding a font for better readability */
-            position: fixed;
-            width: 100%;
-            top: 0;
-            
-            
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s; /* Adding a smooth transition for color change */
-        }
-
-        nav ul li a:hover {
-            color: red; /* Changing text color to red on hover */
-        }
     </style>
 </head>
 <body>
@@ -139,33 +137,34 @@
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
-        <div class="horizontal-container">
-            <div class="image-item">
-                <img alt="911" src="images/911.jpeg">
-                <div class="image-title">The 911</div>
-            </div>
-            <div class="image-item">
-                <img alt="FBI" src="images/FBI.jpeg">
-                <div class="image-title">The FBI</div>
-            </div>
-            <div class="image-item">
-                <img alt="Beacon 3" src="images/beac.jpeg">
-                <div class="image-title">The Beacon</div>
-            </div>
-            <div class="image-item">
-                <img alt="Bloods" src="images/bloods.jpeg">
-                <div class="image-title">The Bloods</div>
-            </div>
-            <div class="image-item">
-                <img alt="The Neighborhood" src="images/hood.jpeg">
-                <div class="image-title">The Neighborhood</div>
-            </div>
-            <div class="image-item">
-                <img alt="FBI" src="images/FBI.jpeg">
-                <div class="image-title">The FBI</div>
-            </div>
-        </div>
     </header>
+
+    <div class="horizontal-container">
+        <div class="image-item">
+            <img alt="911" src="images/911.jpeg">
+            <div class="image-title">The 911</div>
+        </div>
+        <div class="image-item">
+            <img alt="FBI" src="images/FBI.jpeg">
+            <div class="image-title">The FBI</div>
+        </div>
+        <div class="image-item">
+            <img alt="Beacon 3" src="images/beac.jpeg">
+            <div class="image-title">The Beacon</div>
+        </div>
+        <div class="image-item">
+            <img alt="Bloods" src="images/bloods.jpeg">
+            <div class="image-title">The Bloods</div>
+        </div>
+        <div class="image-item">
+            <img alt="The Neighborhood" src="images/hood.jpeg">
+            <div class="image-title">The Neighborhood</div>
+        </div>
+        <div class="image-item">
+            <img alt="FBI" src="images/FBI.jpeg">
+            <div class="image-title">The FBI</div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -176,7 +175,7 @@
             <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
             <!-- Add more social media icons as needed -->
         </ul>
-        <p>&copy; 2024 !Join our community today!Stay connected with us,Discover more on our socials:> Explore our latest updates:Follow us for exclusive content. Experience the world of [Warner Bros]. Your feedback matters to us! Let's create something amazing together!.</p>
+        <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us. Discover more on our socials. Explore our latest updates. Follow us for exclusive content. Experience the world of Warner Bros. Your feedback matters to us! Let's create something amazing together.</p>
     </footer>
 </body>
 </html>
