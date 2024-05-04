@@ -109,26 +109,47 @@
             max-width: 100%;
             max-height: 100%;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+       /* CSS for navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px 0; /* Add padding to top and bottom */
+}
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+nav {
+    display: flex; /* Make navigation items aligned horizontally */
+    justify-content: space-between; /* Spread navigation items evenly */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Limit navigation width */
+    margin: 0 auto; /* Center navigation */
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s; /* Adding a smooth transition for color change */
-        }
+.logo img {
+    height: 50px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add margin to the left of the logo */
+}
 
-        nav ul li a:hover {
-            color: red; /* Changing text color to red on hover */
-        }
+ul {
+    list-style-type: none; /* Remove bullet points from list */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add margin between list items */
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Adding a smooth transition for color change */
+}
+
+ul li a:hover {
+    color: red; /* Changing text color to red on hover */
+}
+
     </style>
 </head>
 
