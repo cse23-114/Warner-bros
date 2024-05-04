@@ -26,43 +26,47 @@
             text-align: center; /* Center text */
         }
 
-        /* Styling for navigation bar */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+        /* CSS for navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px 0; /* Add padding to top and bottom */
+}
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+nav {
+    display: flex; /* Make navigation items aligned horizontally */
+    justify-content: space-between; /* Spread navigation items evenly */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Limit navigation width */
+    margin: 0 auto; /* Center navigation */
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s; /* Adding a smooth transition for color change */
-        }
+.logo img {
+    height: 50px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add margin to the left of the logo */
+}
 
-        nav ul li a:hover {
-            color: red; /* Changing text color to red on hover */
-        }
+ul {
+    list-style-type: none; /* Remove bullet points from list */
+    margin: 0;
+    padding: 0;
+}
 
-        /* Center the logo at the top */
-        header {
-            padding: 20px 0; /* Add padding top and bottom */
-        }
+ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add margin between list items */
+}
 
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Adding a smooth transition for color change */
+}
 
-        .logo img {
-            width: 100px; /* Adjust image width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
+ul li a:hover {
+    color: red; /* Changing text color to red on hover */
+}
+
 
         /* Styling for game list */
         .game-list {
