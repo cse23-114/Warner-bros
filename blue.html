@@ -6,7 +6,7 @@
     <title>Warner Bros Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-        /* CSS code for background video */
+          /* CSS code for background video */
         #bg-video {
             position: fixed;
             top: 0;
@@ -16,10 +16,6 @@
             z-index: -1; /* Ensure the video stays behind other content */
             object-fit: cover; /* Cover the entire viewport */
         }
-         nav ul li a:hover {
-            color: red; /* Changing text color to red on hover */
-        }
-        
         /* Styling for other elements */
         .content {
             position: relative; /* Ensure content stays above video */
@@ -28,14 +24,64 @@
             padding-bottom: 80px; /* Adjust padding to accommodate the footer */
             text-align: center; /* Center text */
         }
+
+        /* Styling for navigation bar */
+        nav {
+            background-color: lightgrey; /* Light grey background color for the navigation */
+            padding: 10px 0; /* Add padding top and bottom */
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Center text */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            padding: 5px 10px; /* Padding for each navigation link */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        nav ul li a:hover {
+            background-color: lightgrey; /* Light grey background on hover */
+        }
+
         /* Center the logo at the top */
-        .logo {
+        header {
+            display: flex;
+            justify-content: center;
             padding: 20px 0; /* Add padding top and bottom */
         }
 
-        .logo img {
-            display: block;
-            margin: 0 auto; /* Center the image */
+        /* Styling for search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         /* Styling for footer */
