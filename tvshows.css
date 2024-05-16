@@ -55,12 +55,11 @@ ul li a:hover {
     color: red; /* Changing text color to red on hover */
 }
 
-/* Styling for grid layout */
+/* Styling for inline layout */
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Only one column */
-    gap: 20px; /* Gap between grid items */
-    padding: 20px; /* Padding for the grid container */
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    padding: 20px; /* Padding for the container */
 }
 
 /* Style for each image item */
