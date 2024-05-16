@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Warner Bros Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         /* CSS code for background video */
-      #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1; /* Ensure the video stays behind other content */
-    object-fit: cover; /* Cover the entire viewport */
-}
-        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflowing content */
+            background: url('background.mp4') no-repeat center center fixed; /* Set background video */
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
         /* Styling for other elements */
         .content {
             position: relative; /* Ensure content stays above video */
@@ -26,50 +26,50 @@
             text-align: center; /* Center text */
         }
 
-     /* Navigation Styles */
-header {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px 0; /* Add padding to top and bottom */
-}
+        /* Navigation Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 20px 0; /* Add padding to top and bottom */
+        }
 
-nav {
-    display: flex; /* Make navigation items aligned horizontally */
-    justify-content: space-between; /* Spread navigation items evenly */
-    align-items: center; /* Align items vertically */
-    max-width: 1200px; /* Limit navigation width */
-    margin: 0 auto; /* Center navigation */
-}
+        nav {
+            display: flex; /* Make navigation items aligned horizontally */
+            justify-content: space-between; /* Spread navigation items evenly */
+            align-items: center; /* Align items vertically */
+            max-width: 1200px; /* Limit navigation width */
+            margin: 0 auto; /* Center navigation */
+        }
 
-.logo img {
-    height: 50px; /* Adjust logo height */
-    width: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Add margin to the left of the logo */
-}
+        .logo img {
+            height: 50px; /* Adjust logo height */
+            width: auto; /* Maintain aspect ratio */
+            margin-left: 20px; /* Add margin to the left of the logo */
+        }
 
-ul {
-    list-style-type: none; /* Remove bullet points from list */
-    margin: 0;
-    padding: 0;
-}
+        ul {
+            list-style-type: none; /* Remove bullet points from list */
+            margin: 0;
+            padding: 0;
+        }
 
-ul li {
-    display: inline; /* Display list items horizontally */
-    margin-right: 20px; /* Add margin between list items */
-}
+        ul li {
+            display: inline; /* Display list items horizontally */
+            margin-right: 20px; /* Add margin between list items */
+        }
 
-ul li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
-}
+        ul li:last-child {
+            margin-right: 0; /* Remove margin from the last list item */
+        }
 
-ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s; /* Adding a smooth transition for color change */
-}
+        ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s; /* Adding a smooth transition for color change */
+        }
 
-ul li a:hover {
-    color: red; /* Changing text color to red on hover */
-}
+        ul li a:hover {
+            color: red; /* Changing text color to red on hover */
+        }
 
         /* Styling for game list */
         .game-list {
