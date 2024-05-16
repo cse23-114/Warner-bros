@@ -4,118 +4,61 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         /* CSS code for background video */
         #bg-video {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
             z-index: -1; /* Ensure the video stays behind other content */
             object-fit: cover; /* Cover the entire viewport */
         }
 
-        /* Styling for header and navigation */
-        header {
-            background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the header readable */
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px; /* Add margin for spacing */
-        }
-
-        nav img {
-            margin-right: 20px; /* Add space between logo and links */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            color: red; /* Changing text color to red on hover */
-        }
-
-        /* Additional CSS to style the form and footer */
+        /* Styling for form */
         #feedback-form {
-            margin: 50px auto;
-            width: 80%;
-            max-width: 600px;
-            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+            margin-top: 150px; /* Adjust margin to center the form */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
             padding: 20px;
             border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto; /* Center the form horizontally */
         }
 
-        #feedback-form label,
-        #feedback-form input,
-        #feedback-form textarea {
+        #feedback-form label {
             display: block;
+            margin-bottom: 10px;
+        }
+
+        #feedback-form input[type="email"],
+        #feedback-form input[type="text"],
+        #feedback-form textarea {
             width: 100%;
-            margin-bottom: 10px; /* Add spacing between elements */
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
 
         #feedback-form textarea {
-            resize: vertical; /* Allow vertical resizing of textarea */
+            height: 150px; /* Set a fixed height for the textarea */
         }
 
         #feedback-form input[type="submit"] {
-            background-color: #333;
-            color: white;
             padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
 
-        footer {
-            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the footer readable */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .social-media-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .social-media-icons li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .social-media-icons li a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #fff;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .social-media-icons li a img {
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
+        #feedback-form input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker shade of blue on hover */
         }
     </style>
 </head>
@@ -123,19 +66,21 @@
 <body>
     <!-- Background Video -->
     <video id="bg-video" autoplay loop muted>
-        <source src="background.mp4" type="video/mp4">
+        <source src="48569-454825064_small.mp4" type="video/mp4">
+        <!-- Add additional source elements for other video formats -->
         Your browser does not support the video tag.
     </video>
+
     <header>
+        <a href="#top">
+            <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
+        </a>
         <nav>
-            <a href="#top">
-                <img alt="logo" height="90" src="Screenshot 2024-04-12 160015.png" width="100">
-            </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
                 <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
+                <li><a href="games and apps.html">Games & Apps</a></li>
                 <li><a href="collections.html">Collections</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
             </ul>
@@ -157,15 +102,16 @@
 
     <footer>
         <ul class="social-media-icons">
-            <li><a href="#"><img src="whATSP.png" alt="WhatsApp"></a></li>
-            <li><a href="#"><img src="TIKTOK.jpeg" alt="TikTok"></a></li>
-            <li><a href="#"><img src="TWITTER.jpeg" alt="Twitter"></a></li>
-            <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="whatsapp.png" alt="WhatsApp"></a></li>
+            <li><a href="#"><img src="tiktok.png" alt="TikTok"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
             <!-- Add more social media icons as needed -->
         </ul>
-        <p>&copy; 2024 !Join our community today!Stay connected with us,Discover more on our socials:> Explore our latest updates:Follow us for exclusive content. Experience the world of [Warner Bros]. Your feedback matters to us! Let's create something amazing together!.</p>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
-    <script>
+
+         <script>
         // JavaScript code can be added here for form submission handling or other functionality
     </script>
 </body>
