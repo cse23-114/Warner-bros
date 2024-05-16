@@ -4,7 +4,116 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Feedback</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    /* CSS code for background video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the video stays behind other content */
+    object-fit: cover; /* Cover the entire viewport */
+}
+
+/* Styling for header and navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the header readable */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+nav img {
+    margin-right: 20px; /* Add space between logo and links */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Additional CSS to style the form and footer */
+#feedback-form {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#feedback-form label,
+#feedback-form input,
+#feedback-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; /* Add spacing between elements */
+}
+
+#feedback-form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+#feedback-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the footer readable */
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media-icons li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
+
+.social-media-icons li a img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
+</style>
 </head>
 
 <body>
