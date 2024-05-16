@@ -1,0 +1,119 @@
+/* CSS code for background video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video stays behind other content */
+    object-fit: cover; /* Cover the entire viewport */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set default font family */
+}
+
+/* CSS for navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px 0; /* Add padding to top and bottom */
+}
+
+nav {
+    display: flex; /* Make navigation items aligned horizontally */
+    justify-content: space-between; /* Spread navigation items evenly */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Limit navigation width */
+    margin: 0 auto; /* Center navigation */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add margin to the left of the logo */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points from list */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add margin between list items */
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Adding a smooth transition for color change */
+}
+
+ul li a:hover {
+    color: red; /* Changing text color to red on hover */
+}
+
+
+.horizontal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Add margin from the top to avoid overlap with the navigation */
+}
+
+.image-section {
+    margin-right: 20px; /* Add space between sections */
+}
+
+.image-item img {
+    height: 250px; /* Adjusted height for footer images */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.image-title {
+    text-align: center;
+    margin-top: 10px; /* Increase margin for better spacing */
+    font-size: 16px; /* Adjust font size */
+    color: white; /* Text color */
+}
+
+/* Styling for footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed; /* Position fixed at the bottom */
+    bottom: 0;
+    width: 100%;
+    z-index: 3; /* Ensure the footer is above the video */
+}
+
+.social-media-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media-icons li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
+
+.social-media-icons li a img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
