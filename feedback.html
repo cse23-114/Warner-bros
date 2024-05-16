@@ -5,115 +5,118 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Feedback</title>
     <style>
-    /* CSS code for background video */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure the video stays behind other content */
-    object-fit: cover; /* Cover the entire viewport */
-}
+        /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
 
-/* Styling for header and navigation */
-header {
-    background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the header readable */
-    padding: 20px;
-    text-align: center;
-}
+        /* Styling for header and navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the header readable */
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensure header is above the background video */
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Add margin for spacing */
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Add margin for spacing */
+        }
 
-nav img {
-    margin-right: 20px; /* Add space between logo and links */
-}
+        nav img {
+            margin-right: 20px; /* Add space between logo and links */
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-/* Additional CSS to style the form and footer */
-#feedback-form {
-    margin: 50px auto;
-    width: 80%;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
-    padding: 20px;
-    border-radius: 10px;
-}
+        /* Additional CSS to style the form and footer */
+        #feedback-form {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-#feedback-form label,
-#feedback-form input,
-#feedback-form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px; /* Add spacing between elements */
-}
+        #feedback-form label,
+        #feedback-form input,
+        #feedback-form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px; /* Add spacing between elements */
+        }
 
-#feedback-form textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
-}
+        #feedback-form textarea {
+            resize: vertical; /* Allow vertical resizing of textarea */
+        }
 
-#feedback-form input[type="submit"] {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        #feedback-form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-footer {
-    background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the footer readable */
-    padding: 20px;
-    text-align: center;
-}
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the footer readable */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
 
-.social-media-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.social-media-icons li {
-    display: inline;
-    margin: 0 10px;
-}
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-.social-media-icons li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    line-height: 40px;
-    text-align: center;
-}
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
 
-.social-media-icons li a img {
-    vertical-align: middle;
-    max-width: 100%;
-    max-height: 100%;
-}
-</style>
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -147,7 +150,8 @@ footer {
         <input type="text" id="name" name="name" required>
         <br>
         <label for="feedback">Feedback:</label>
-        <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Please leave your feedback here..." required></textarea>
+        <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Please leave your feedback here..."
+            required></textarea>
         <br>
         <input type="submit" value="Submit">
     </form>
@@ -160,7 +164,9 @@ footer {
             <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
             <!-- Add more social media icons as needed -->
         </ul>
-        <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us. Discover more on our socials. Explore our latest updates. Follow us for exclusive content. Experience the world of Warner Bros. Your feedback matters to us! Let's create something amazing together.</p>
+        <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us.
+            Discover more on our socials. Follow us for exclusive content. Your feedback matters to us! Let's create
+            something amazing together.</p>
     </footer>
 
     <script>
@@ -168,4 +174,4 @@ footer {
     </script>
 </body>
 
-</html> 
+</html>
