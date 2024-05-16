@@ -58,7 +58,7 @@ ul li a:hover {
 /* Styling for grid layout */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjust columns based on available space */
+    grid-template-columns: 1fr; /* Only one column */
     gap: 20px; /* Gap between grid items */
     padding: 20px; /* Padding for the grid container */
 }
