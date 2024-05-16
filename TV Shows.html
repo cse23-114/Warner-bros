@@ -85,27 +85,27 @@ ul li a:hover {
             color: white; /* Text color */
         }
 
-        /* Footer */
+        /* Styling for footer */
         footer {
-            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; /* Position fixed at the bottom */
             bottom: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-            color: white; /* Text color */
-            padding: 20px;
-            text-align: center;
+            z-index: 3; /* Ensure the footer is above the video */
         }
 
         .social-media-icons {
             list-style: none;
             padding: 0;
-            margin: 20px 0; /* Add margin for separation */
-            text-align: center; /* Center-align icons */
+            margin: 0;
         }
 
         .social-media-icons li {
             display: inline;
-            margin: 0 15px; /* Add margin between icons */
+            margin: 0 10px;
         }
 
         .social-media-icons li a {
@@ -113,17 +113,15 @@ ul li a:hover {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #333; /* Background color for icons */
+            background-color: #fff;
             line-height: 40px;
             text-align: center;
-            color: white; /* Icon color */
-            font-size: 20px; /* Icon size */
-            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
         }
 
-        .social-media-icons li a:hover {
-            background-color: #555; /* Darken background on hover */
-            transform: translateY(-3px); /* Add slight lift effect on hover */
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
