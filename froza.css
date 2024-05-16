@@ -1,4 +1,3 @@
-
 /* CSS code for background video */
 #bg-video {
     position: fixed;
@@ -30,7 +29,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Center text */
 }
 
 nav ul li {
@@ -53,6 +51,7 @@ nav ul li a:hover {
 header {
     display: flex;
     justify-content: center;
+    align-items: center; /* Align items vertically */
     padding: 20px 0; /* Add padding top and bottom */
 }
 
