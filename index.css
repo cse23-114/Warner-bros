@@ -16,14 +16,18 @@ header {
   background-color: #f2f2f2;
 }
 
+/* CSS for the logo */
 .logo {
-  margin-top: 20px;
-  margin-left: 20px;
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
 }
+
 .logo img {
   width: 100px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
+
 
 nav ul {
   list-style-type: none;
