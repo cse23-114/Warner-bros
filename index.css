@@ -16,10 +16,11 @@ header {
   background-color: #f2f2f2;
 }
 
-.logo img {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+.logo {
+  margin-top: 20px;
+  margin-left: 20px;
 }
+
 
 nav ul {
   list-style-type: none;
