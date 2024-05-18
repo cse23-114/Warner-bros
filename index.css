@@ -1,93 +1,107 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
+        /* Styling for other elements */
+        .content {
+            position: relative; /* Ensure content stays above video */
+            z-index: 1;
+            color: white; /* Example color */
+            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
+            text-align: center; /* Center text */
+        }
 
-body {
-  font-family: Arial, sans-serif;
-}
+       nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f2f2f2;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-/* CSS for the logo */
-.logo {
-  position: absolute;
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s; /* Adding a smooth transition for color change */
+        }
 
-.logo img {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
+        nav ul li a:hover {
+            color: red; /* Changing text color to red on hover */
+        }
 
+        /* Center the logo at the top */
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; /* Add padding top and bottom */
+        }
 
-nav ul {
-  list-style-type: none;
-}
+        /* Styling for search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.search-container,
-.signin-container {
-  margin-top: 20px;
-  text-align: center;
-}
+        /* Styling for footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; /* Position fixed at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 3; /* Ensure the footer is above the video */
+        }
 
-.search-container input[type="text"],
-.search-container button {
-  padding: 10px;
-  margin-right: 10px;
-}
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.search-container button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-}
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-.signin-container a {
-  text-decoration: none;
-  color: #333;
-}
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
 
-.signin-container span {
-  margin: 0 10px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.social-media-icons {
-  list-style-type: none;
-  padding: 0;
-}
-
-.social-media-icons li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.social-media-icons li img {
-  width: 25px;
-  height: auto;
-}
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
