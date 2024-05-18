@@ -1,5 +1,21 @@
-/* Combined CSS for background video, body, navigation, list, link, inline layout, image item, image title, and footer styles */
+/* Combined CSS for General Styles and Previous Styles */
 
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Previous Styles */
 /* Background Video Styles */
 #bg-video {
     position: fixed;
@@ -9,12 +25,6 @@
     min-height: 100%;
     z-index: -1;
     object-fit: cover;
-}
-
-/* Body Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 /* Navigation Styles */
@@ -71,16 +81,33 @@ ul li a:hover {
     flex: 0 0 33.33%;
     box-sizing: border-box;
     padding: 10px;
+    margin: 10px;
+    position: relative;
 }
 
 .image-item img {
     max-width: 100%;
-    height: auto;
+    transition: transform 0.3s;
 }
 
 .image-title {
-    margin-top: 10px;
-    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    margin: 0;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.image-item:hover .image-title {
+    opacity: 1;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
 }
 
 /* Footer Styles */
