@@ -20,7 +20,10 @@ header {
   margin-top: 20px;
   margin-left: 20px;
 }
-
+.logo img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
 
 nav ul {
   list-style-type: none;
