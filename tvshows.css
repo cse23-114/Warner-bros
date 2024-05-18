@@ -1,88 +1,98 @@
-/* CSS code for background video */
+/* Combined CSS for background video, body, navigation, list, link, inline layout, image item, image title, and footer styles */
+
+/* Background Video Styles */
 #bg-video {
     position: fixed;
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1; /* Ensure the video stays behind other content */
-    object-fit: cover; /* Cover the entire viewport */
+    z-index: -1;
+    object-fit: cover;
 }
 
+/* Body Styles */
 body {
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Set default font family */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* CSS for navigation */
+/* Navigation Styles */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px 0; /* Add padding to top and bottom */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
 }
 
 nav {
-    display: flex; /* Make navigation items aligned horizontally */
-    justify-content: space-between; /* Spread navigation items evenly */
-    align-items: center; /* Align items vertically */
-    max-width: 1200px; /* Limit navigation width */
-    margin: 0 auto; /* Center navigation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo img {
-    height: 50px; /* Adjust logo height */
-    width: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Add margin to the left of the logo */
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
 }
 
 ul {
-    list-style-type: none; /* Remove bullet points from list */
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 ul li {
-    display: inline; /* Display list items horizontally */
-    margin-right: 20px; /* Add margin between list items */
+    display: inline;
+    margin-right: 20px;
 }
 
 ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s; /* Adding a smooth transition for color change */
+    transition: color 0.3s;
 }
 
 ul li a:hover {
-    color: red; /* Changing text color to red on hover */
+    color: red;
 }
 
-/* Styling for inline layout */
+/* Inline Layout Styles */
 .grid-container {
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
-    padding: 20px; /* Padding for the container */
+    overflow-x: auto;
+    padding: 20px;
 }
 
-/* Style for each image item */
+/* Image Item Styles */
 .image-item {
-    text-align: center; /* Center align content */
+    text-align: center;
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
-/* Style for the image title */
+.image-item img {
+    max-width: 100%;
+    height: auto;
+}
+
 .image-title {
-    margin-top: 10px; /* Add some space between the image and its title */
-    font-weight: bold; /* Make the title bold */
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* Styling for footer */
+/* Footer Styles */
 footer {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed; /* Position fixed at the bottom */
+    position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 3; /* Ensure the footer is above the video */
+    z-index: 3;
 }
 
 .social-media-icons {
