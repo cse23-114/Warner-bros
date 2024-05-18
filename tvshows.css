@@ -86,10 +86,10 @@ ul li a:hover {
 }
 
 .image-item img {
-    max-width: 150px; /* Set the maximum width */
-    max-height: 150px; /* Set the maximum height */
-    transition: transform 0.3s;
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
 }
+
 
 
 .image-title {
