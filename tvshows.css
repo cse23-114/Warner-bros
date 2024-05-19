@@ -1,123 +1,256 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Tv Shows</title>
-  <link rel="stylesheet" type="text/css" href="tvshows.css">
-</head>
-<body>
-  <header>
-    <figure>
-      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
-    </figure>
-    <div class="bx bx-menu" id="menu"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="TV Shows.html">TV Shows</a></li>
-        <li><a href="games & apps.html">Games & Apps</a></li>
-        <li><a href="collections.html">Collections</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
 
-  <section class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="tom.jpeg">
-      <h1>The Tom and Jerry<br>Trending</h1>
-    </div>
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  transition: 0.5s;
+  background: black;
+}
 
-    <div class="mySlides fade">
-      <img src="the.jpeg">
-      <h1>The Fresh Prince<br>New Season</h1>
-    </div>
+figure img {
+  height: 60px;
+  width: auto;
+  margin-right: auto;
+}
 
-    <div class="mySlides fade">
-      <img src="Flash.jpg">
-      <h1>Flash<br>What's Hot</h1>
-    </div>
+.bx {
+  color: white;
+}
 
-    <button class="prev" onclick="plusSlides(-1)">❮</button>
-    <button class="next" onclick="plusSlides(1)">❯</button>
-  </section>
+nav {
+  display: flex;
+  column-gap: 5rem;
+}
 
-  <section style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </section>
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
 
-  <section>
-    <h2>What's Hot</h2>
-  </section>
-  <section class="movies">
-        <img src="winchesters.jpeg" width="149" alt="What's Hot Movie 1" height="234">
-        <img src="twilght.jpeg" width="149" alt="What's Hot Movie 2" height="234">
-         <img src="Flash.jpg" width="149" alt="What's Hot Movie 3"height="234">
-         <img src="all.jpeg" width="149" alt="What's Hot Movie 4" height="234">
-        <img src="NCIS.jpeg" width="149" alt="What's Hot Movie 5" height="234">
-  </section>
+nav li {
+  position: relative;
+}
 
-  <section>
-    <h2>Trending </h2>
-  </section>
-  <img src="intse.jpeg" width="149" alt="Trending" height="234">
-  <img src="jack.jpeg" width="149" alt="Trending" height="234">
-  <img src="power.jpeg" width="149" alt="Trending" height="234">
-   <img src="tom.jpeg" width="149" alt="Trending" height="234">
-   <img src="zig.jpeg" width="149" alt="Trending" height="234">
-  <section class="movies">
-    
-  </section>
+nav a {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: color 0.4s;
+}
 
-  <section>
-    <h2>New Series</h2>
-  </section>
-  <section class="movies">
-        <img src="bel.jpeg"  width="149" alt="New Series" height="234">
-        <img src="game.jpeg"  width="149" alt="New Series" height="234">
-        <img src="the.jpeg"  width="149" alt="New Series" height="234">
-        <img src="arrow.jpeg"  width="149" alt="New Series" height="234">
-        <img src="911.jpeg" width="149" alt="New Series" height="234">
-  </section>
-  <footer>
-    <ul class="social-media-icons">
-      <li><a href="#"><img src="whATSP.png" alt="WhatsApp"></a></li>
-      <li><a href="#"><img src="TIKTOK.jpeg" alt="TikTok"></a></li>
-      <li><a href="#"><img src="TWITTER.jpeg" alt="Twitter"></a></li>
-      <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
-    </ul>
-    <p>&copy; 2024 Warner Bros Website. All rights reserved.</p>
-  </footer>
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+nav a:hover {
+  animation: colorChange 0.5s forwards;
+}
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  animation: underlineChange 0.5s forwards;
+}
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
+}
 
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-    }
-  </script>
-</body>
-</html>
+@keyframes underlineChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+#menu {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000001;
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 80px;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2.5rem;
+}
+
+h2 {
+  max-width: 968px;
+  margin: 100px auto 10px;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 4px solid blue;
+}
+
+.movies {
+  max-width: 968px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 3rem;
+}
+
+article {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s all linear;
+}
+
+article img:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .social-media-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer .social-media-icons li {
+  margin-right: 10px;
+}
+
+footer img {
+  width: 25px;
+  height: auto;
+}
+
+footer img:hover {
+  opacity: 0.8;
+  background: black;
+}
+
+footer p {
+  margin: 0;
+}
