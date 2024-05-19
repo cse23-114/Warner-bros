@@ -68,9 +68,35 @@ nav a::after {
   transition: transform 0.25s ease-out;
 }
 
+nav a:hover {
+  animation: colorChange 0.5s forwards;
+}
+
 nav a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  animation: underlineChange 0.5s forwards;
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes underlineChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
 }
 
 #menu {
