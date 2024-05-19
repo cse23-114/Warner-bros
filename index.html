@@ -199,8 +199,8 @@
             max-width: 100%;
             max-height: 100%;
         }
-     ..info-box {
-    background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% transparency */
+   .info-box {
+    background-color: red; /* Red color */
     color: white; /* Font color */
     padding: 20px; /* Padding inside the box */
     margin: 20px auto; /* Center the box horizontally with some margin */
@@ -213,6 +213,11 @@
     position: relative;
     max-width: 100%;
     margin-top: 20px;
+}
+
+.mySlides img {
+    width: 100%; /* Set image width to 100% */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .mySlides {
@@ -228,7 +233,6 @@
     from {opacity: .4}
     to {opacity: 1}
 }
-
 
     </style>
 </head>
@@ -274,16 +278,17 @@
     <p>Welcome to the Warner Bros Website. Here you can find the latest movies, TV shows, games, and more!</p>
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="kung fu.jpeg" style="width:100%">
+            <img src="kung fu.jpeg" alt="Slide 1">
         </div>
         <div class="mySlides fade">
-            <img src="froza.jpeg" style="width:100%">
+            <img src="thunder.jpeg" alt="Slide 2">
         </div>
         <div class="mySlides fade">
-            <img src="tom.jpeg" style="width:100%">
+            <img src="nfs.jpeg" alt="Slide 3">
         </div>
     </div>
 </div>
+
 
 
     <!-- Footer -->
