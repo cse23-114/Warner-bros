@@ -199,7 +199,7 @@
             max-width: 100%;
             max-height: 100%;
         }
-     .info-box {
+     ..info-box {
     background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% transparency */
     color: white; /* Font color */
     padding: 20px; /* Padding inside the box */
@@ -207,6 +207,28 @@
     max-width: 600px; /* Maximum width of the box */
     text-align: center; /* Center the text */
 }
+
+/* Slideshow CSS */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 
     </style>
 </head>
@@ -250,7 +272,19 @@
 <div class="info-box">
     <h2>About Warner Bros Website</h2>
     <p>Welcome to the Warner Bros Website. Here you can find the latest movies, TV shows, games, and more!</p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="kung fu.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="froza.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="tom.jpeg" style="width:100%">
+        </div>
+    </div>
 </div>
+
 
     <!-- Footer -->
     <footer>
@@ -263,5 +297,22 @@
         </ul>
         <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us. Discover more on our socials. Explore our latest updates. Follow us for exclusive content. Experience the world of Warner Bros. Your feedback matters to us! Let's create something amazing together.</p>
     </footer>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
 </body>
 </html>
