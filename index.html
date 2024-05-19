@@ -1,10 +1,120 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>Warner Bros Website</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Ensure the video stays behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
+        /* Styling for other elements */
+        .content {
+            position: relative; /* Ensure content stays above video */
+            z-index: 1;
+            color: white; /* Example color */
+            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
+            text-align: center; /* Center text */
+        }
+
+       nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s; /* Adding a smooth transition for color change */
+        }
+
+        nav ul li a:hover {
+            color: red; /* Changing text color to red on hover */
+        }
+
+        /* Center the logo at the top */
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; /* Add padding top and bottom */
+        }
+
+        /* Styling for search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Styling for footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; /* Position fixed at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 3; /* Ensure the footer is above the video */
+        }
+
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,3 +168,4 @@
 </body>
 
 </html>
+may do the same here
