@@ -5,236 +5,201 @@
     <meta charset="UTF-8">
     <title>Warner Bros Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-      
-/* CSS code for header */
-header {
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    transition: 0.5s;
-    background: black;
-}
+ <style>
+        /* CSS code for header */
+        header {
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            transition: 0.5s;
+            background: black;
+        }
 
-figure img {
-    height: 50px;
-    width: auto;
-    margin-right: auto;
-}
+        figure img {
+            height: 50px;
+            width: auto;
+            margin-right: auto;
+        }
+
         /* Styling for navigation bar */
-/* Styling for navigation bar */
-nav {
-    background-color: transparent; /* Remove the grey shade */
-    padding: 10px 30px; /* Add padding */
-    text-align: right; /* Align the list to the right */
-    position: relative;
-    z-index: 1001;
-}
+        nav {
+            background-color: transparent;
+            /* Remove the grey shade */
+            padding: 10px 30px;
+            /* Add padding */
+            text-align: right;
+            /* Align the list to the right */
+            position: relative;
+            z-index: 1001;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block; /* Make the list inline block */
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            /* Make the list inline block */
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last list item */
-}
+        nav ul li:last-child {
+            margin-right: 0;
+            /* Remove margin for the last list item */
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
 
+        nav a:hover {
+            animation: colorChange 0.5s forwards;
+        }
 
-nav a:hover {
-    animation: colorChange 0.5s forwards;
-}
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            animation: underlineChange 0.5s forwards;
+        }
 
-nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    animation: underlineChange 0.5s forwards;
-}
+        @keyframes colorChange {
+            0% {
+                color: white;
+            }
 
-@keyframes colorChange {
-    0% {
-        color: white;
-    }
-    50% {
-        color: red;
-    }
-    100% {
-        color: green;
-    }
-}
+            50% {
+                color: red;
+            }
 
-@keyframes underlineChange {
-    0% {
-        background-color: red;
-    }
-    100% {
-        background-color: green;
-    }
-}
+            100% {
+                color: green;
+            }
+        }
 
-/* CSS code for background video */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    /* Ensure the video stays behind other content */
-    object-fit: cover;
-    /* Cover the entire viewport */
-}
+        @keyframes underlineChange {
+            0% {
+                background-color: red;
+            }
 
-/* Styling for other elements */
-.content {
-    position: relative;
-    /* Ensure content stays above video */
-    z-index: 1;
-    color: white;
-    /* Example color */
-    padding-bottom: 80px;
-    /* Adjust padding to accommodate the footer */
-    text-align: center;
-    /* Center text */
-}
+            100% {
+                background-color: green;
+            }
+        }
 
-/* Styling for navigation bar */
-nav {
-    background-color: lightgrey;
-    /* Light grey background color for the navigation */
-    padding: 10px 0;
-    /* Add padding top and bottom */
-    text-align: center;
-}
+        /* CSS code for background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            /* Ensure the video stays behind other content */
+            object-fit: cover;
+            /* Cover the entire viewport */
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    /* Center text */
-}
+        /* Styling for other elements */
+        .content {
+            position: relative;
+            /* Ensure content stays above video */
+            z-index: 1;
+            color: white;
+            /* Example color */
+            padding-bottom: 80px;
+            /* Adjust padding to accommodate the footer */
+            text-align: center;
+            /* Center text */
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        /* Styling for search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 5px 10px;
-    /* Padding for each navigation link */
-    border-radius: 5px;
-    /* Rounded corners */
-}
+        .search-container input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
 
-nav ul li a {
-    color: white; /* Set the font color to white */
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+        .search-container button[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
 
-/* Rest of your existing CSS code */
+        .search-container button[type=submit]:hover {
+            background-color: #45a049;
+        }
 
+        /* Styling for footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            /* Position fixed at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 3;
+            /* Ensure the footer is above the video */
+        }
 
-/* Styling for search bar */
-.search-container {
-    text-align: center;
-    margin-top: 20px;
-}
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.search-container input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-}
+        .social-media-icons li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-.search-container button[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 50%;
-}
+        .social-media-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
 
-.search-container button[type=submit]:hover {
-    background-color: #45a049;
-}
-
-/* Styling for footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    /* Position fixed at the bottom */
-    bottom: 0;
-    width: 100%;
-    z-index: 3;
-    /* Ensure the footer is above the video */
-}
-
-.social-media-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-media-icons li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.social-media-icons li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    line-height: 40px;
-    text-align: center;
-}
-
-.social-media-icons li a img {
-    vertical-align: middle;
-    max-width: 100%;
-    max-height: 100%;
-}
-</style>
+        .social-media-icons li a img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 
 <body>
