@@ -51,11 +51,26 @@ nav a {
   letter-spacing: 2px;
   text-decoration: none;
   color: white;
-  transition: 0.4s all linear;
+  position: relative;
+  transition: color 0.4s;
 }
 
-nav a:hover {
-  border-bottom: 3px solid red;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 #menu {
