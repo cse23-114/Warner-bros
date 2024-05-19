@@ -29,21 +29,29 @@ figure img {
     margin-right: auto;
 }
         /* Styling for navigation bar */
+/* Styling for navigation bar */
 nav {
-    background-color: lightgrey;
-    /* Light grey background color for the navigation */
-    padding: 10px 0;
-    /* Add padding top and bottom */
-    text-align: center;
-    position: relative; /* Add position relative */
-    z-index: 1001; /* Set a higher z-index value */
+    background-color: transparent; /* Remove the grey shade */
+    padding: 10px 30px; /* Add padding */
+    text-align: right; /* Align the list to the right */
+    position: relative;
+    z-index: 1001;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Make the list inline block */
+}
 
-nav {
-    display: flex;
-    column-gap: 2rem;
-    align-items: center;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last list item */
 }
 
 nav ul li a {
@@ -51,36 +59,11 @@ nav ul li a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    font-family: Arial, sans-serif; /* Change the font family */
-    font-size: 16px; /* Adjust the font size */
-    font-weight: 500; /* Adjust the font weight */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-
-nav li {
-    position: relative;
-}
-
-nav a {
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
-    position: relative;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: red;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
 
 nav a:hover {
     animation: colorChange 0.5s forwards;
