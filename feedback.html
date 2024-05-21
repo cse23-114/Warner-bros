@@ -5,18 +5,59 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Feedback</title>
     <style>
-        /* CSS code for background video */
-        #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure the video stays behind other content */
-            object-fit: cover; /* Cover the entire viewport */
-        }
- /* Styling for navigation bar */
-      nav {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is behind all other content */
+}
+
+video#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  transition: 0.5s;
+  background: black;
+}
+
+figure img {
+  height: 60px;
+  margin-right: auto;
+}
+
+.bx {
+  color: white;
+}
+
+nav {
   display: flex;
   column-gap: 5rem;
 }
@@ -84,7 +125,176 @@ nav a:hover::after {
   }
 }
 
+#menu {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000001;
+  display: none;
+}
 
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 80px;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.mySlides img {
+  width: 100%;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2.5rem;
+}
+
+h2 {
+  max-width: 968px;
+  margin: 100px auto 10px;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 4px solid blue;
+  animation: headingUnderlineChange 5s infinite;
+}
+
+@keyframes headingUnderlineChange {
+  0% {
+    border-bottom-color: blue;
+  }
+  25% {
+    border-bottom-color: red;
+  }
+  50% {
+    border-bottom-color: black;
+  }
+  75% {
+    border-bottom-color: green;
+  }
+  100% {
+    border-bottom-color: blue;
+  }
+}
+
+.movies {
+  max-width: 968px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 3rem;
+}
+
+article {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+article img {
+  object-fit: cover;
+  transition: 0.2s all linear;
+}
+
+article img:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .social-media-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer .social-media-icons li {
+  margin-right: 10px;
+}
+
+footer img {
+  width: 25px;
+}
+
+footer img:hover {
+  opacity: 0.8;
+  background: black;
+}
+
+footer p {
+  margin: 0;
+}
         /* Additional CSS to style the form and footer */
         #feedback-form {
             margin: 50px auto;
@@ -114,40 +324,6 @@ nav a:hover::after {
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the footer readable */
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .social-media-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .social-media-icons li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .social-media-icons li a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #fff;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .social-media-icons li a img {
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
         }
     </style>
 </head>
