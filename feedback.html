@@ -15,31 +15,24 @@
             z-index: -1; /* Ensure the video stays behind other content */
             object-fit: cover; /* Cover the entire viewport */
         }
-
-        /* Styling for header and navigation */
-        header {
-            background-color: rgba(0, 0, 0, 0.8); /* Add some opacity to make the header readable */
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            z-index: 1; /* Ensure header is above the background video */
-        }
-
+ /* Styling for navigation bar */
         nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px; /* Add margin for spacing */
-        }
-
-        nav img {
-            margin-right: 20px; /* Add space between logo and links */
+            background-color: transparent;
+            /* Remove the grey shade */
+            padding: 10px 30px;
+            /* Add padding */
+            text-align: right;
+            /* Align the list to the right */
+            position: relative;
+            z-index: 1001;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: inline-block;
+            /* Make the list inline block */
         }
 
         nav ul li {
@@ -47,9 +40,53 @@
             margin-right: 20px;
         }
 
+        nav ul li:last-child {
+            margin-right: 0;
+            /* Remove margin for the last list item */
+        }
+
         nav ul li a {
             color: white;
             text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            animation: colorChange 0.5s forwards;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            animation: underlineChange 0.5s forwards;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: white;
+            }
+
+            50% {
+                color: red;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        @keyframes underlineChange {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: green;
+            }
         }
 
         /* Additional CSS to style the form and footer */
