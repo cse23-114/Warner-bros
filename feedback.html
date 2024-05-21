@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Feedback</title>
@@ -10,7 +9,6 @@
             margin: 0;
             padding: 0;
             color: white;
-            overflow: hidden;
             background-color: #333;
         }
 
@@ -83,13 +81,13 @@
         }
 
         nav a:hover {
-            color: red; /* Changed hover color */
+            color: green; /* Changed hover color */
         }
 
         nav a:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
-            background-color: red; /* Changed hover color */
+            background-color: green; /* Changed hover color */
         }
 
         #feedback-form-container {
@@ -131,6 +129,10 @@
             padding: 20px;
             display: flex;
             justify-content: space-between;
+            position: fixed; /* Fixed position to keep it at the bottom */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it's above other content */
         }
 
         footer .social-media-icons {
@@ -208,3 +210,4 @@
 </body>
 
 </html>
+
