@@ -10,7 +10,8 @@
             margin: 0;
             padding: 0;
             color: white;
-            overflow: hidden; /* Hide overflow content */
+            overflow: hidden;
+            background-color: #333;
         }
 
         #bg-video {
@@ -25,7 +26,6 @@
             z-index: -1;
         }
 
-        /* Styles for the header and navigation */
         header {
             position: fixed;
             height: 60px;
@@ -37,7 +37,6 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 30px;
-            transition: 0.5s;
             background: black;
         }
 
@@ -78,74 +77,46 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: red;
+            background-color: transparent; /* Changed to transparent initially */
             transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
+            transition: transform 0.25s ease-out, background-color 0.25s ease-out; /* Added background-color transition */
         }
 
         nav a:hover {
-            animation: colorChange 0.5s forwards;
+            color: red; /* Changed hover color */
         }
 
         nav a:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
-            animation: underlineChange 0.5s forwards;
+            background-color: red; /* Changed hover color */
         }
 
-        @keyframes colorChange {
-            0% {
-                color: white;
-            }
-
-            50% {
-                color: red;
-            }
-
-            100% {
-                color: green;
-            }
-        }
-
-        @keyframes underlineChange {
-            0% {
-                background-color: red;
-            }
-
-            100% {
-                background-color: green;
-            }
-        }
-
-        /* Additional CSS to style the form and footer */
         #feedback-form-container {
-            margin: 50px auto;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        #feedback-form {
-            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            color: black; /* Adjust text color for better readability */
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            color: black;
+            width: 80%;
+            max-width: 600px;
         }
 
         #feedback-form label,
         #feedback-form input,
         #feedback-form textarea {
-            flex: 1;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         #feedback-form textarea {
-            resize: vertical; /* Allow vertical resizing of textarea */
+            resize: vertical;
         }
 
         #feedback-form input[type="submit"] {
-            flex-basis: 100%;
             background-color: #333;
             color: white;
             padding: 10px 20px;
@@ -192,7 +163,6 @@
     <!-- Background Video -->
     <video id="bg-video" autoplay loop muted>
         <source src="background.mp4" type="video/mp4">
-        <!-- Add additional source elements for other video formats -->
         Your browser does not support the video tag.
     </video>
 
@@ -229,11 +199,11 @@
             <li><a href="#"><img src="TIKTOK.jpeg" alt="TikTok"></a></li>
             <li><a href="#"><img src="TWITTER.jpeg" alt="Twitter"></a></li>
             <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
-            <!-- Add more social media icons as needed -->
         </ul>
         <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us.
             Discover more on our socials. Follow us for exclusive content. Your feedback matters to us! Let's create
-            something amazing together.</p>
+            something
+        </p>
     </footer>
 </body>
 
