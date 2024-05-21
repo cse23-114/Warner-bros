@@ -58,7 +58,7 @@
             position: relative;
         }
 
-       nav a {
+    nav a {
             font-size: 20px;
             letter-spacing: 2px;
             text-decoration: none;
@@ -75,32 +75,68 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: transparent; /* Changed to transparent initially */
+            background-color: red;
             transform-origin: bottom right;
-            transition: transform 0.25s ease-out, background-color 0.25s ease-out; /* Added background-color transition */
+            transition: transform 0.25s ease-out;
         }
 
         nav a:hover {
-            color: green; /* Changed hover color */
+            animation: colorChange 0.5s forwards;
         }
 
         nav a:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
-            background-color: green; /* Changed hover color */
+            animation: underlineChange 0.5s forwards;
         }
 
-        #feedback-form-container {
+        @keyframes colorChange {
+            0% {
+                color: white;
+            }
+
+            50% {
+                color: red;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        @keyframes underlineChange {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+
+       #feedback-form-container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 20px; /* Rounded border edges */
             color: black;
             width: 80%;
             max-width: 600px;
+            animation: borderAnimation 2s infinite alternate; /* Added animation */
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-color: red;
+            }
+
+            100% {
+                border-color: blue;
+            }
         }
 
         #feedback-form label,
