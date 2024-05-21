@@ -70,88 +70,63 @@
       <img src="TIKTOK.jpeg"  width="149" alt="Apps" height="234">
       <img src="IG.png"  width="149" alt="Apps" height="234">
       <img src="drive.jpeg" width="149" alt="Apps" height="234">
+      <img src="indr.jpeg" width="149" alt="Apps" height="234">
+      <img src="facebook.jpeg" width="149" alt="Apps" height="234">
+      <img src="bible.jpeg" width="149" alt="Apps" height="234">
+      <img src="pdf.jpeg" width="149" alt="Apps" height="234">
+      <img src="foxit.jpeg" width="149" alt="Apps" height="234">
     </div>
   </section>
-        <!-- Game List -->
-        <div class="game-list">
-            <figure class="game-image">
-                <a href="froza.html"><img alt="Froza Horizon 5" src="froza.jpeg" width="149" height="234"></a>
-                <figcaption>Froza Horizon 5</figcaption>
-            </figure>
-
-            <figure class="game-image">
-                <a href="blur.html"><img alt="Blur" src="blur.png" width="149" height="234"></a>
-                <figcaption>Blur</figcaption>
-            </figure>
-             <figure class="game-image">
-                <a href="whatsapp.html"><img alt="Whatsapp" src="whATSP.png" width="149" height="234"></a>
-                <figcaption>Whatsapp</figcaption>
-            </figure>
-
-            <figure class="game-image">
-                <a href="fifa22.html"><img alt="Fifa 22" src="fifa22.jpeg" width="149" height="234"></a>
-                <figcaption>Fifa 22</figcaption>
-            </figure>
-            
-            <figure class="game-image">
-                <a href="call.html"><img alt="Call Of Duty" src="call of duty.jpeg" width="149" height="234"></a>
-                <figcaption>Call Of Duty</figcaption>
-            </figure>
-             <figure class="game-image">
-                <a href="twitter.html"><img alt="Twitter" src=" TWITTER.jpeg" width="149" height="234"></a>
-                <figcaption>Twitter</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="w2k.html"><img alt="Wrestling 2K" src="w2k.jpeg" width="149" height="234"></a>
-                <figcaption>Wrestling 2K</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="gta5.html"><img alt="GTA 5" src="gt.jpeg" width="149" height="234"></a>
-                <figcaption>GTA 5</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="grid2.html"><img alt="GRID 2" src="grid2.jpeg" width="149" height="234"></a>
-                <figcaption>GRID 2</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="hot.html"><img alt="Need For Speed Hot Pursuit" src="hot.jpeg" width="149" height="234"></a>
-                <figcaption>Need For Speed Hot Pursuit</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="nfs.html"><img alt="Need for Speed" src="ned.jpeg" width="149" height="234"></a>
-                <figcaption>Need For Speed</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="tiktok.html"><img alt="tiktok" src="TIKTOK.jpeg" width="149" height="234"></a>
-                <figcaption>Tiktok</figcaption>
-            </figure>
-            <figure class="game-image">
-                <a href="mort.html"><img alt="Mortal Kombat" src="mort.jpeg" width="149" height="234"></a>
-                <figcaption>Mortal Kombat</figcaption>
-            </figure>
-             <figure class="game-image">
-                <a href="ig.html"><img alt="ig" src="IG.png" width="149" height="234"></a>
-                <figcaption>Instagram</figcaption>
-            </figure>
-
-            <figure class="game-image">
-                <a href="ufc.html"><img alt="UFC" src="ufc.jpeg" width="149" height="234"></a>
-                <figcaption>UFC</figcaption>
-            </figure>
-        </div>
+   
+  <h2>Mobile Gaming</h2>
+    <div class="movies">
+      <img src="dr.jpeg"  width="149" alt="Mobile Gaming" height="234">
+      <img src="football.jpeg"  width="149" alt="Mobile Gaming" height="234">
+      <img src="nfsr.jpeg"  width="149" alt="Mobile Gaming" height="234">
+      <img src="payback.jpeg"  width="149" alt="Mobile Gaming" height="234">
+      <img src="sub.jpeg" width="149" alt="Mobile Gaming" height="234">
+      <img src="candy.jpeg" width="149" alt="Mobile Gaming" height="234">
     </div>
-
-    <!-- Footer -->
+  </section>
+    
     <footer>
         <ul class="social-media-icons">
             <li><a href="#"><img src="whATSP.png" alt="WhatsApp"></a></li>
             <li><a href="#"><img src="TIKTOK.jpeg" alt="TikTok"></a></li>
             <li><a href="#"><img src="TWITTER.jpeg" alt="Twitter"></a></li>
             <li><a href="#"><img src="IG.png" alt="Instagram"></a></li>
-            <!-- Add more social media icons as needed -->
+  
         </ul>
         <p>&copy; 2024 Warner Bros Website. All rights reserved. Join our community today! Stay connected with us. Discover more on our socials. Explore our latest updates. Follow us for exclusive content. Experience the world of Warner Bros. Your feedback matters to us! Let's create something amazing together.</p>
     </footer>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 </body>
 
 </html>
