@@ -18,11 +18,9 @@
     <div class="content">
         <header>
             <!-- Logo -->
-            <div class="logo">
-                <a href="#top">
-                    <img alt="logo" src="logo.jpeg">
-                </a>
-            </div>
+           <figure>
+      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+    </figure>
 
             <!-- Navigation -->
             <nav>
@@ -36,6 +34,27 @@
                 </ul>
             </nav>
         </header>
+        <section class="horizontal-container slideshow-container">
+    <figure class="image-item mySlides fade">
+      <a href="king kong.html"><img alt="KingKong" height="234" src="king%20kong.jpeg" width="149"></a>
+      <figcaption class="image-title">King-Kong vs Godzilla</figcaption>
+    </figure>
+    <figure class="image-item mySlides fade">
+      <a href="joker.html"><img alt="joker" height="234" src="joker.jpeg" width="149"></a>
+      <figcaption class="image-title">The Joker</figcaption>
+    </figure>
+    <figure class="image-item mySlides fade">
+      <a href="kung fu panda.html"><img alt="kung" height="234" src="kung%20fu.jpeg" width="149"></a>
+      <figcaption class="image-title">The Kung Fu Panda 4</figcaption>
+    </figure>
+    <figure class="image-item mySlides fade">
+      <a href="bee.html"><img alt="Bee" height="234" src="bee.jpeg" width="143"></a>
+      <figcaption class="image-title">The Beekeeper</figcaption>
+    </figure>
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+  </section>
+        
 <section class="horizontal-container">
     <figure class="image-item">
       <a href="king kong.html"><img alt="KingKong" height="234" src="king%20kong.jpeg" width="149"></a>
@@ -147,6 +166,29 @@
         </ul>
         <p>&copy; 2024 Warner Bros Website. All rights reserved.</p>
     </footer>
+         <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+         </script>
 </body>
 
 </html>
