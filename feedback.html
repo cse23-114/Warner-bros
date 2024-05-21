@@ -16,78 +16,74 @@
             object-fit: cover; /* Cover the entire viewport */
         }
  /* Styling for navigation bar */
-        nav {
-            background-color: transparent;
-            /* Remove the grey shade */
-            padding: 10px 30px;
-            /* Add padding */
-            text-align: right;
-            /* Align the list to the right */
-            position: relative;
-            z-index: 1001;
-        }
+      nav {
+  display: flex;
+  column-gap: 5rem;
+}
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
-            /* Make the list inline block */
-        }
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+nav li {
+  position: relative;
+}
 
-        nav ul li:last-child {
-            margin-right: 0;
-            /* Remove margin for the last list item */
-        }
+nav a {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: color 0.4s;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-        }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-        nav a:hover {
-            animation: colorChange 0.5s forwards;
-        }
+nav a:hover {
+  animation: colorChange 0.5s forwards;
+}
 
-        nav a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-            animation: underlineChange 0.5s forwards;
-        }
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  animation: underlineChange 0.5s forwards;
+}
 
-        @keyframes colorChange {
-            0% {
-                color: white;
-            }
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
+}
 
-            50% {
-                color: red;
-            }
+@keyframes underlineChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
+}
 
-            100% {
-                color: green;
-            }
-        }
-
-        @keyframes underlineChange {
-            0% {
-                background-color: red;
-            }
-
-            100% {
-                background-color: green;
-            }
-        }
 
         /* Additional CSS to style the form and footer */
         #feedback-form {
