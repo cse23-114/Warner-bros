@@ -1,173 +1,272 @@
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
 }
 
 .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is behind all other content */
 }
 
 video#background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 
 header {
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
-    transition: 0.5s;
-    background: black;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  transition: 0.5s;
+  background: black;
 }
 
 figure img {
-    height: 60px;
-    margin-right: auto;
+  height: 60px;
+  margin-right: auto;
+}
+
+.bx {
+  color: white;
 }
 
 nav {
-    display: flex;
-    column-gap: 5rem;
+  display: flex;
+  column-gap: 5rem;
 }
 
 nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
+  display: flex;
+  gap: 30px;
+  list-style: none;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav li {
+  position: relative;
+}
+
+nav a {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: color 0.4s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover {
+  animation: colorChange 0.5s forwards;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  animation: underlineChange 0.5s forwards;
+}
+
+@keyframes colorChange {
+  0% {
     color: white;
-    transition: color 0.3s;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
 }
 
-nav ul li a:hover {
-    color: #f39c12;
+@keyframes underlineChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+#menu {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000001;
+  display: none;
 }
 
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: 100px auto 0;
-    text-align: center;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 80px;
 }
 
 .mySlides {
-    display: none;
+  display: none;
+  width: 100%;
+  position: relative;
+  align-items: center;
 }
 
-.slide-img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
+.mySlides img {
+  width: 100%;
 }
 
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2.5rem;
+}
+
+h2 {
+  max-width: 968px;
+  margin: 100px auto 10px;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 4px solid blue;
 }
 
 .movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 30px;
+  max-width: 968px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 3rem;
 }
 
-.movie-img {
-    width: 149px;
-    height: 234px;
-    object-fit: cover;
-    margin: 10px;
+article {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+article img {
+  object-fit: cover;
+  transition: 0.2s all linear;
+}
+
+article img:hover {
+  transform: translateY(-10px);
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: black;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-footer ul {
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
+footer .social-media-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-footer li img {
-    width: 40px;
-    height: 40px;
+footer .social-media-icons li {
+  margin-right: 10px;
+}
+
+footer img {
+  width: 25px;
+}
+
+footer img:hover {
+  opacity: 0.8;
+  background: black;
 }
 
 footer p {
-    margin-top: 10px;
-    font-size: 14px;
+  margin: 0;
 }
