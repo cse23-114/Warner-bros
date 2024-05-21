@@ -118,24 +118,26 @@
         }
 
         /* Additional CSS to style the form and footer */
-        #feedback-form {
+        #feedback-form-container {
             margin: 50px auto;
             width: 80%;
             max-width: 600px;
+        }
+
+        #feedback-form {
             background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to make the form readable */
             padding: 20px;
             border-radius: 10px;
             color: black; /* Adjust text color for better readability */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         #feedback-form label,
         #feedback-form input,
         #feedback-form textarea {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px; /* Add spacing between elements */
-            padding: 8px;
-            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+            flex: 1;
         }
 
         #feedback-form textarea {
@@ -143,6 +145,7 @@
         }
 
         #feedback-form input[type="submit"] {
+            flex-basis: 100%;
             background-color: #333;
             color: white;
             padding: 10px 20px;
@@ -207,16 +210,18 @@
         </nav>
     </header>
 
-    <form id="feedback-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="feedback">Feedback:</label>
-        <textarea name="feedback" id="feedback" cols="30" rows="10"
-            placeholder="Please leave your feedback here..." required></textarea>
-        <input type="submit" value="Submit">
-    </form>
+    <div id="feedback-form-container">
+        <form id="feedback-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="feedback">Feedback:</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"
+                placeholder="Please leave your feedback here..." required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
     <footer>
         <ul class="social-media-icons">
