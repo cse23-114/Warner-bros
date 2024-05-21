@@ -1,158 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Warner Bros Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-          /* CSS code for background video */
-        #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1; /* Ensure the video stays behind other content */
-            object-fit: cover; /* Cover the entire viewport */
-        }
-        /* Styling for other elements */
-        .content {
-            position: relative; /* Ensure content stays above video */
-            z-index: 1;
-            color: white; /* Example color */
-            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
-            text-align: center; /* Center text */
-        }
-
-        /* Styling for navigation bar */
-        nav {
-            background-color: lightgrey; /* Light grey background color for the navigation */
-            padding: 10px 0; /* Add padding top and bottom */
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center; /* Center text */
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: black;
-            text-decoration: none;
-            padding: 5px 10px; /* Padding for each navigation link */
-            border-radius: 5px; /* Rounded corners */
-        }
-
-        nav ul li a:hover {
-            background-color: lightgrey; /* Light grey background on hover */
-        }
-
-        /* Center the logo at the top */
-        header {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0; /* Add padding top and bottom */
-        }
-
-        /* Styling for search bar */
-        .search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .search-container input[type="text"] {
-            padding: 8px;
-            width: 300px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .search-container button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Styling for footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed; /* Position fixed at the bottom */
-            bottom: 0;
-            width: 100%;
-            z-index: 3; /* Ensure the footer is above the video */
-        }
-
-        .social-media-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .social-media-icons li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .social-media-icons li a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #fff;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .social-media-icons li a img {
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <title>Blue Bettle</title>
+  <link rel="stylesheet" type="text/css" href="tvshows.css">
 </head>
-
 <body>
-    <!-- Video Background -->
-    <video autoplay loop muted id="bg-video">
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-
-    <!-- Content -->
-    <div class="content">
-        <!-- Logo -->
-        <header class="logo">
-            <figure>
-                  <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
-            </figure>
-        </header>
-
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </div>
+  </div>
+  <header>
+    <figure>
+      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+    </figure>
+    <div class="bx bx-menu" id="menu"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="TV Shows.html">TV Shows</a></li>
+        <li><a href="games & apps.html">Games & Apps</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
     <div class="image-grid">
         <div class="image-item">
             <img alt="Blue Bettle" src="blue.jpeg">
