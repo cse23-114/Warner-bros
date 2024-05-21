@@ -1,172 +1,57 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Warner Bros Website</title>
-    <style>
-        /* CSS code for background video */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Hide overflowing content */
-            background: url('background.mp4') no-repeat center center fixed; /* Set background video */
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        /* Styling for other elements */
-        .content {
-            position: relative; /* Ensure content stays above video */
-            z-index: 1;
-            color: white; /* Example color */
-            padding-bottom: 80px; /* Adjust padding to accommodate the footer */
-            text-align: center; /* Center text */
-        }
-
-        /* Navigation Styles */
-        header {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-            padding: 20px 0; /* Add padding to top and bottom */
-            position: relative; /* Position relative to ensure z-index works */
-            z-index: 2; /* Ensure navigation is above the video */
-        }
-
-        nav {
-            display: flex; /* Make navigation items aligned horizontally */
-            justify-content: space-between; /* Spread navigation items evenly */
-            align-items: center; /* Align items vertically */
-            max-width: 1200px; /* Limit navigation width */
-            margin: 0 auto; /* Center navigation */
-        }
-
-        .logo img {
-            height: 50px; /* Adjust logo height */
-            width: auto; /* Maintain aspect ratio */
-            margin-left: 20px; /* Add margin to the left of the logo */
-        }
-
-        ul {
-            list-style-type: none; /* Remove bullet points from list */
-            margin: 0;
-            padding: 0;
-        }
-
-        ul li {
-            display: inline; /* Display list items horizontally */
-            margin-right: 20px; /* Add margin between list items */
-        }
-
-        ul li:last-child {
-            margin-right: 0; /* Remove margin from the last list item */
-        }
-
-        ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s; /* Adding a smooth transition for color change */
-            padding: 10px 20px; /* Add padding to navigation links */
-            border-radius: 5px; /* Add border-radius for rounded corners */
-        }
-
-        ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color on hover */
-            color: red; /* Changing text color to red on hover */
-        }
-
-        /* Styling for game list */
-        .game-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Gap between game images */
-            margin-top: 20px; /* Add margin to separate from navigation */
-        }
-
-        .game-image {
-            text-align: center;
-            max-width: 150px; /* Adjust maximum width of game images */
-        }
-
-        .game-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .game-image figcaption {
-            margin-top: 10px; /* Add margin between image and caption */
-        }
-
-        /* Styling for footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed; /* Position fixed at the bottom */
-            bottom: 0;
-            width: 100%;
-            z-index: 3; /* Ensure the footer is above the video */
-        }
-
-        .social-media-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .social-media-icons li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        .social-media-icons li a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #fff;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .social-media-icons li a img {
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <title>Games & Apps</title>
+  <link rel="stylesheet" type="text/css" href="tvshows.css">
 </head>
-
 <body>
-    <!-- Video Background -->
-    <video autoplay loop muted style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;">
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
+  </div>
+  <header>
+    <figure>
+      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+    </figure>
+    <div class="bx bx-menu" id="menu"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="TV Shows.html">TV Shows</a></li>
+        <li><a href="games & apps.html">Games & Apps</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+ <section class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="froza.jpeg">
+      <h1>Froza Horizon 5<br>PC Games</h1>
+    </div>
 
-    <!-- Content -->
-    <div class="content">
-        <!-- Logo and Navigation -->
-        <header>
-            <nav>
-                <div class="logo">
-                      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
-                    </a>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="TV Shows.html">TV Shows</a></li>
-                    <li><a href="games & apps.html">Games & Apps</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="mySlides fade">
+      <img src="whATSP.png">
+      <h1>Whatsapp<br>Apps</h1>
+    </div>
 
+    <div class="mySlides fade">
+      <img src="TWITTER.jpg">
+      <h1>Twitter<br>Mobile Games & Apps</h1>
+    </div>
+
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
+  </section>
+
+  <section style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </section>
         <!-- Game List -->
         <div class="game-list">
             <figure class="game-image">
