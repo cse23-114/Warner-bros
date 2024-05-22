@@ -1,126 +1,32 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Games & Apps</title>
-    <style>
-        /* Styling for video background */
-        video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1; /* Ensure the video stays behind other content */
-        }
-
-        /* Styling for header */
-        header {
-            position: relative;
-            z-index: 2; /* Ensure header is above video */
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Styling for navigation bar */
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Styling for image grid */
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            justify-items: center;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            color: white;
-        }
-
-        .image-item {
-            position: relative;
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            max-width: 400px;
-            display: block;
-            margin: 0 auto;
-            border-radius: 10px;
-        }
-
-        .image-title {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        /* Styling for text content */
-        .about {
-            max-width: 800px;
-            padding: 20px;
-            color: white;
-        }
-
-        .about p {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-    </style>
+  <title>Fifa 22</title>
+  <link rel="stylesheet" type="text/css" href="tvshows.css">
 </head>
-
 <body>
-    <!-- Video Background -->
-    <video autoplay loop muted>
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-
-    <!-- Content -->
-    <header>
-          <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+  </div>
+  <header>
+    <figure>
+      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+    </figure>
+    <div class="bx bx-menu" id="menu"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="TV Shows.html">TV Shows</a></li>
+        <li><a href="games & apps.html">Games & Apps</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <div class="image-grid">
         <div class="image-item">
