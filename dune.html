@@ -1,85 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Warner Bros Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 20px;
-            padding: 20px;
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            max-width: 400px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .image-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .about {
-            padding: 20px;
-        }
-
-        .about p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-    </style>
+  <title>Dune</title>
+  <link rel="stylesheet" type="text/css" href="tvshows.css">
 </head>
-
 <body>
-    <header>
-        <a href="#top">
-            <img alt="Screenshot 2024-04-12 160015.png" height="90" src="Screenshot 2024-04-12 160015.png" width="100"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="TV Shows.html">TV Shows</a></li>
-                <li><a href="games & apps.html">Games & Apps</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <header>
+    <figure>
+      <a href="#top"><img alt="logo" height="90" src="R.png" width="100"></a>
+    </figure>
+    <div class="bx bx-menu" id="menu"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="TV Shows.html">TV Shows</a></li>
+        <li><a href="games & apps.html">Games & Apps</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
     <div class="image-grid">
         <div class="image-item">
             <img alt="The Dune" src="dune.jpeg">
