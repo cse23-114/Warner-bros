@@ -45,6 +45,11 @@ figure img {
   height: 60px;
   margin-right: auto;
 }
+figcaption {
+  text-align: center; /* Align text at the center */
+  width: 149px; /* Set a fixed width */
+  margin-top: 5px; /* Adjust top margin as needed */
+}
 
 .bx {
   color: white;
